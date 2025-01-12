@@ -1,0 +1,21 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ICCDataAdapterRecord
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Alamofire
+import ICCDataAdapterCore
+import ICCDataAdapterProtocol
+@_exported import ICCDataAdapterRecord
+import ICCPlatformSDKSwift
+import MQTTLibrary
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+@_inheritsConvenienceInitializers @objc public class OSRSAdapterRecord : ObjectiveC.NSObject {
+  @objc public func queryRecord(_ channelid: Swift.String, begin: Foundation.Date, end: Foundation.Date, source: ICCDataAdapterProtocol.RecordSource, record recordType: ICCDataAdapterProtocol.MBL_RECORD_TYPE, isSecurity: Swift.Bool) throws -> [ICCDataAdapterProtocol.DSSRecordInfo]
+  @objc public func queryRecordBitmask(_ channelId: Swift.String, month: Foundation.Date, source: ICCDataAdapterProtocol.RecordSource) throws -> [Foundation.NSNumber]
+  @objc public func queryAlarmRecord(_ alarmID: Swift.String) throws -> [ICCDataAdapterProtocol.DSSRecordInfo]
+  @objc override dynamic public init()
+  @objc deinit
+}

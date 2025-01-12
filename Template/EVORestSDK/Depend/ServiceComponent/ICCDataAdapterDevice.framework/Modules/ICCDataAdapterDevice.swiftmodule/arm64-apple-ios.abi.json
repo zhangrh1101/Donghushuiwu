@@ -1,0 +1,2309 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ICCDataAdapterDevice",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ObjectMapper",
+        "printedName": "ObjectMapper",
+        "declKind": "Import",
+        "moduleName": "ICCDataAdapterDevice"
+      },
+      {
+        "kind": "Import",
+        "name": "ICCPlatformSDKSwift",
+        "printedName": "ICCPlatformSDKSwift",
+        "declKind": "Import",
+        "moduleName": "ICCDataAdapterDevice"
+      },
+      {
+        "kind": "Import",
+        "name": "MQTTLibrary",
+        "printedName": "MQTTLibrary",
+        "declKind": "Import",
+        "moduleName": "ICCDataAdapterDevice"
+      },
+      {
+        "kind": "Import",
+        "name": "ICCDataAdapterCore",
+        "printedName": "ICCDataAdapterCore",
+        "declKind": "Import",
+        "moduleName": "ICCDataAdapterDevice"
+      },
+      {
+        "kind": "Import",
+        "name": "XMLDictionary",
+        "printedName": "XMLDictionary",
+        "declKind": "Import",
+        "moduleName": "ICCDataAdapterDevice"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DPRestProSDKDataAdapterDeviceSwift",
+        "printedName": "DPRestProSDKDataAdapterDeviceSwift",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "queryCurrentMediaVKByDeviceId",
+            "printedName": "queryCurrentMediaVKByDeviceId(withDeviceId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "BRMDeviceGetCurrentMediaVKResponseObjc",
+                "printedName": "ICCDataAdapterDevice.BRMDeviceGetCurrentMediaVKResponseObjc",
+                "usr": "c:objc(cs)BRMDeviceGetCurrentMediaVKResponseObjc"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ICCDataAdapterDevice@objc(cs)DPRestProSDKDataAdapterDeviceSwift(im)queryCurrentMediaVKByDeviceIdWithDeviceId:error:",
+            "mangledName": "$s20ICCDataAdapterDevice016DPRestProSDKDatabC5SwiftC021queryCurrentMediaVKByC2Id04withcL0So012BRMDeviceGetiJ14VKResponseObjcCSS_tKF",
+            "moduleName": "ICCDataAdapterDevice",
+            "objc_name": "queryCurrentMediaVKByDeviceIdWithDeviceId:error:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "queryAccessDoorStatus",
+            "printedName": "queryAccessDoorStatus(WithChannelIds:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ExpressaccessdoorgetDoorAlwaysOpenCloseStatusResponseObjc",
+                "printedName": "ICCDataAdapterDevice.ExpressaccessdoorgetDoorAlwaysOpenCloseStatusResponseObjc",
+                "usr": "c:objc(cs)ExpressaccessdoorgetDoorAlwaysOpenCloseStatusResponseObjc"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ICCDataAdapterDevice@objc(cs)DPRestProSDKDataAdapterDeviceSwift(im)queryAccessDoorStatusWithChannelIds:error:",
+            "mangledName": "$s20ICCDataAdapterDevice016DPRestProSDKDatabC5SwiftC21queryAccessDoorStatus14WithChannelIdsSo020Expressaccessdoorgetj15AlwaysOpenCloseK12ResponseObjcCSS_tKF",
+            "moduleName": "ICCDataAdapterDevice",
+            "objc_name": "queryAccessDoorStatusWithChannelIds:error:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "quertAccessDoorGlobalConfig",
+            "printedName": "quertAccessDoorGlobalConfig()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ICCDataAdapterDevice@objc(cs)DPRestProSDKDataAdapterDeviceSwift(im)quertAccessDoorGlobalConfigAndReturnError:",
+            "mangledName": "$s20ICCDataAdapterDevice016DPRestProSDKDatabC5SwiftC27quertAccessDoorGlobalConfigSaySSGyKF",
+            "moduleName": "ICCDataAdapterDevice",
+            "objc_name": "quertAccessDoorGlobalConfigAndReturnError:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "queryAccessDoorGlobalStatus",
+            "printedName": "queryAccessDoorGlobalStatus()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ICCDataAdapterDevice@objc(cs)DPRestProSDKDataAdapterDeviceSwift(im)queryAccessDoorGlobalStatusAndReturnError:",
+            "mangledName": "$s20ICCDataAdapterDevice016DPRestProSDKDatabC5SwiftC27queryAccessDoorGlobalStatusSSyKF",
+            "moduleName": "ICCDataAdapterDevice",
+            "objc_name": "queryAccessDoorGlobalStatusAndReturnError:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getDeviceOrgByLayered",
+            "printedName": "getDeviceOrgByLayered(withChannelTypes:timeout:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "EVOBRMGetDeviceOrgByLayeredResponseObjc",
+                "printedName": "ICCDataAdapterDevice.EVOBRMGetDeviceOrgByLayeredResponseObjc",
+                "usr": "c:objc(cs)EVOBRMGetDeviceOrgByLayeredResponseObjc"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ICCDataAdapterDevice@objc(cs)DPRestProSDKDataAdapterDeviceSwift(im)getDeviceOrgByLayeredWithChannelTypes:timeout:error:",
+            "mangledName": "$s20ICCDataAdapterDevice016DPRestProSDKDatabC5SwiftC03getC12OrgByLayered16withChannelTypes7timeoutSo09EVOBRMGetcijK12ResponseObjcCSaySSG_SdtKF",
+            "moduleName": "ICCDataAdapterDevice",
+            "objc_name": "getDeviceOrgByLayeredWithChannelTypes:timeout:error:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getDeviceOrg",
+            "printedName": "getDeviceOrg(withOrgCode:channelTypes:timeout:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "EVOBRMGetDeviceOrgResponseObjc",
+                "printedName": "ICCDataAdapterDevice.EVOBRMGetDeviceOrgResponseObjc",
+                "usr": "c:objc(cs)EVOBRMGetDeviceOrgResponseObjc"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ICCDataAdapterDevice@objc(cs)DPRestProSDKDataAdapterDeviceSwift(im)getDeviceOrgWithOrgCode:channelTypes:timeout:error:",
+            "mangledName": "$s20ICCDataAdapterDevice016DPRestProSDKDatabC5SwiftC03getC3Org04withI4Code12channelTypes7timeoutSo09EVOBRMGetcI12ResponseObjcCSS_SaySSGSdtKF",
+            "moduleName": "ICCDataAdapterDevice",
+            "objc_name": "getDeviceOrgWithOrgCode:channelTypes:timeout:error:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "ptzSitePosition",
+            "printedName": "ptzSitePosition(withChannelId:extend:pointX:pointY:pointZ:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ICCDataAdapterDevice@objc(cs)DPRestProSDKDataAdapterDeviceSwift(im)ptzSitePositionWithChannelId:extend:pointX:pointY:pointZ:error:",
+            "mangledName": "$s20ICCDataAdapterDevice016DPRestProSDKDatabC5SwiftC15ptzSitePosition13withChannelId6extend6pointX0O1Y0O1ZS2S_S4StKF",
+            "moduleName": "ICCDataAdapterDevice",
+            "objc_name": "ptzSitePositionWithChannelId:extend:pointX:pointY:pointZ:error:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "operatorPtzCamera",
+            "printedName": "operatorPtzCamera(withChannelId:step:command:extend:direct:operateType:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ICCDataAdapterDevice@objc(cs)DPRestProSDKDataAdapterDeviceSwift(im)operatorPtzCameraWithChannelId:step:command:extend:direct:operateType:error:",
+            "mangledName": "$s20ICCDataAdapterDevice016DPRestProSDKDatabC5SwiftC17operatorPtzCamera13withChannelId4step7command6extend6direct11operateTypeS2S_SSSiS3StKF",
+            "moduleName": "ICCDataAdapterDevice",
+            "objc_name": "operatorPtzCameraWithChannelId:step:command:extend:direct:operateType:error:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "operatePtzDirect",
+            "printedName": "operatePtzDirect(withChannelId:stepX:stepY:extend:direct:command:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ICCDataAdapterDevice@objc(cs)DPRestProSDKDataAdapterDeviceSwift(im)operatePtzDirectWithChannelId:stepX:stepY:extend:direct:command:error:",
+            "mangledName": "$s20ICCDataAdapterDevice016DPRestProSDKDatabC5SwiftC16operatePtzDirect13withChannelId5stepX0N1Y6extend6direct7commandS2S_S4SSitKF",
+            "moduleName": "ICCDataAdapterDevice",
+            "objc_name": "operatePtzDirectWithChannelId:stepX:stepY:extend:direct:command:error:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "operatePtzPresetPoint",
+            "printedName": "operatePtzPresetPoint(wtihChannelId:prepointcode:presetPointName:operatorType:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ICCDataAdapterDevice@objc(cs)DPRestProSDKDataAdapterDeviceSwift(im)operatePtzPresetPointWithWtihChannelId:prepointcode:presetPointName:operatorType:error:",
+            "mangledName": "$s20ICCDataAdapterDevice016DPRestProSDKDatabC5SwiftC21operatePtzPresetPoint13wtihChannelId12prepointcode06presetK4Name12operatorTypeS2S_SiS2StKF",
+            "moduleName": "ICCDataAdapterDevice",
+            "objc_name": "operatePtzPresetPointWithWtihChannelId:prepointcode:presetPointName:operatorType:error:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "queryPtzPrePoint",
+            "printedName": "queryPtzPrePoint(withChannelId:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DMSPtzGetPresetPointsResponseObjc",
+                "printedName": "ICCDataAdapterDevice.DMSPtzGetPresetPointsResponseObjc",
+                "usr": "c:objc(cs)DMSPtzGetPresetPointsResponseObjc"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ICCDataAdapterDevice@objc(cs)DPRestProSDKDataAdapterDeviceSwift(im)queryPtzPrePointWithChannelId:error:",
+            "mangledName": "$s20ICCDataAdapterDevice016DPRestProSDKDatabC5SwiftC16queryPtzPrePoint13withChannelIdSo33DMSPtzGetPresetPointsResponseObjcCSSSg_tKF",
+            "moduleName": "ICCDataAdapterDevice",
+            "objc_name": "queryPtzPrePointWithChannelId:error:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getChannelsCount",
+            "printedName": "getChannelsCount()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "EVOBRMGetChannelsCountResponseObjc",
+                "printedName": "ICCDataAdapterDevice.EVOBRMGetChannelsCountResponseObjc",
+                "usr": "c:objc(cs)EVOBRMGetChannelsCountResponseObjc"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ICCDataAdapterDevice@objc(cs)DPRestProSDKDataAdapterDeviceSwift(im)getChannelsCountAndReturnError:",
+            "mangledName": "$s20ICCDataAdapterDevice016DPRestProSDKDatabC5SwiftC16getChannelsCountSo09EVOBRMGetiJ12ResponseObjcCyKF",
+            "moduleName": "ICCDataAdapterDevice",
+            "objc_name": "getChannelsCountAndReturnError:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getDevices",
+            "printedName": "getDevices(withDeviceCodes:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "EVOBRMGetDevicesResponseObjc",
+                "printedName": "ICCDataAdapterDevice.EVOBRMGetDevicesResponseObjc",
+                "usr": "c:objc(cs)EVOBRMGetDevicesResponseObjc"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ICCDataAdapterDevice@objc(cs)DPRestProSDKDataAdapterDeviceSwift(im)getDevicesWithDeviceCodes:error:",
+            "mangledName": "$s20ICCDataAdapterDevice016DPRestProSDKDatabC5SwiftC10getDevices04withC5CodesSo09EVOBRMGetI12ResponseObjcCSaySSG_tKF",
+            "moduleName": "ICCDataAdapterDevice",
+            "objc_name": "getDevicesWithDeviceCodes:error:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getMediaVKS",
+            "printedName": "getMediaVKS(startDate:endDate:deviceCode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[ICCDataAdapterProtocol.DSSPlateMediaVKInfo]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DSSPlateMediaVKInfo",
+                    "printedName": "ICCDataAdapterProtocol.DSSPlateMediaVKInfo",
+                    "usr": "c:objc(cs)DSSPlateMediaVKInfo"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ICCDataAdapterDevice@objc(cs)DPRestProSDKDataAdapterDeviceSwift(im)getMediaVKSWithStartDate:endDate:deviceCode:",
+            "mangledName": "$s20ICCDataAdapterDevice016DPRestProSDKDatabC5SwiftC11getMediaVKS9startDate03endL010deviceCodeSaySo08DSSPlateI6VKInfoCGSS_S2StF",
+            "moduleName": "ICCDataAdapterDevice",
+            "objc_name": "getMediaVKSWithStartDate:endDate:deviceCode:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getUserView",
+            "printedName": "getUserView()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DSSUserViewDeptInfo",
+                "printedName": "ICCDataAdapterProtocol.DSSUserViewDeptInfo",
+                "usr": "c:objc(cs)DSSUserViewDeptInfo"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ICCDataAdapterDevice@objc(cs)DPRestProSDKDataAdapterDeviceSwift(im)getUserViewAndReturnError:",
+            "mangledName": "$s20ICCDataAdapterDevice016DPRestProSDKDatabC5SwiftC11getUserViewSo07DSSUserJ8DeptInfoCyKF",
+            "moduleName": "ICCDataAdapterDevice",
+            "objc_name": "getUserViewAndReturnError:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "queryTemperature",
+            "printedName": "queryTemperature(_:point:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NSNumber",
+                "printedName": "Foundation.NSNumber",
+                "usr": "c:objc(cs)NSNumber"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGPoint",
+                "printedName": "CoreFoundation.CGPoint",
+                "usr": "c:@S@CGPoint"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ICCDataAdapterDevice@objc(cs)DPRestProSDKDataAdapterDeviceSwift(im)queryTemperature:point:error:",
+            "mangledName": "$s20ICCDataAdapterDevice016DPRestProSDKDatabC5SwiftC16queryTemperature_5pointSo8NSNumberCSS_So7CGPointVtKF",
+            "moduleName": "ICCDataAdapterDevice",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "controlSoundLight",
+            "printedName": "controlSoundLight(_:isOn:callback:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Any?, Swift.Error?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Any?, Swift.Error?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Any?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Error?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ICCDataAdapterDevice@objc(cs)DPRestProSDKDataAdapterDeviceSwift(im)controlSoundLight:isOn:callback:",
+            "mangledName": "$s20ICCDataAdapterDevice016DPRestProSDKDatabC5SwiftC17controlSoundLight_4isOn8callbackySaySSG_SbyypSg_s5Error_pSgtctF",
+            "moduleName": "ICCDataAdapterDevice",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "controlAlarmOut",
+            "printedName": "controlAlarmOut(_:isOn:callback:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Any?, Swift.Error?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Any?, Swift.Error?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Any?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Error?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ICCDataAdapterDevice@objc(cs)DPRestProSDKDataAdapterDeviceSwift(im)controlAlarmOut:isOn:callback:",
+            "mangledName": "$s20ICCDataAdapterDevice016DPRestProSDKDatabC5SwiftC15controlAlarmOut_4isOn8callbackySS_SbyypSg_s5Error_pSgtctF",
+            "moduleName": "ICCDataAdapterDevice",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getSoftTriggerList",
+            "printedName": "getSoftTriggerList(_:callback:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Any?, Swift.Error?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Any?, Swift.Error?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Any?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Error?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ICCDataAdapterDevice@objc(cs)DPRestProSDKDataAdapterDeviceSwift(im)getSoftTriggerList:callback:",
+            "mangledName": "$s20ICCDataAdapterDevice016DPRestProSDKDatabC5SwiftC18getSoftTriggerList_8callbackySS_yypSg_s5Error_pSgtctF",
+            "moduleName": "ICCDataAdapterDevice",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "generateSoftTrigger",
+            "printedName": "generateSoftTrigger(_:alarmTypeId:callback:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Any?, Swift.Error?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(Any?, Swift.Error?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Any?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "ProtocolComposition",
+                            "printedName": "Any"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.Error?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Error",
+                            "printedName": "Swift.Error",
+                            "usr": "s:s5ErrorP"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ICCDataAdapterDevice@objc(cs)DPRestProSDKDataAdapterDeviceSwift(im)generateSoftTrigger:alarmTypeId:callback:",
+            "mangledName": "$s20ICCDataAdapterDevice016DPRestProSDKDatabC5SwiftC19generateSoftTrigger_11alarmTypeId8callbackySS_SSyypSg_s5Error_pSgtctF",
+            "moduleName": "ICCDataAdapterDevice",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "DPRestProSDKDataAdapterDeviceSwift",
+                "printedName": "ICCDataAdapterDevice.DPRestProSDKDataAdapterDeviceSwift",
+                "usr": "c:@M@ICCDataAdapterDevice@objc(cs)DPRestProSDKDataAdapterDeviceSwift"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@ICCDataAdapterDevice@objc(cs)DPRestProSDKDataAdapterDeviceSwift(im)init",
+            "mangledName": "$s20ICCDataAdapterDevice016DPRestProSDKDatabC5SwiftCACycfc",
+            "moduleName": "ICCDataAdapterDevice",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@ICCDataAdapterDevice@objc(cs)DPRestProSDKDataAdapterDeviceSwift",
+        "mangledName": "$s20ICCDataAdapterDevice016DPRestProSDKDatabC5SwiftC",
+        "moduleName": "ICCDataAdapterDevice",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 541,
+      "length": 50,
+      "value": "\"evo-apigw\/admin\/API\/BRM\/Device\/GetCurrentMediaVK\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 632,
+      "length": 50,
+      "value": "\"evo-apigw\/admin\/API\/BRM\/Device\/GetCurrentMediaVK\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 1288,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1320,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 1404,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1414,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 1710,
+      "length": 32,
+      "value": "\"OBMS\/accessControl\/door\/status\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 2844,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2876,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 2960,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2970,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 3184,
+      "length": 46,
+      "value": "\"OBMS\/accessControl\/door\/globalControl\/config\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 3834,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3866,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 3950,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3960,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 4190,
+      "length": 47,
+      "value": "\"OBMS\/accessControl\/door\/globalControl\/control\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 4624,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4656,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 4740,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4750,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 5109,
+      "length": 9,
+      "value": "\"evo-brm\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 5151,
+      "length": 59,
+      "value": "\"evo-apigw\/evo-brm\/\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 5180,
+      "length": 1,
+      "value": "\"\/tree\/client\/grade\/device-org\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 5684,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5716,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 5800,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5810,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 8714,
+      "length": 9,
+      "value": "\"evo-brm\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 8756,
+      "length": 53,
+      "value": "\"evo-apigw\/evo-brm\/\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 8785,
+      "length": 1,
+      "value": "\"\/tree\/client\/device-org\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 8912,
+      "length": 5,
+      "value": "\"001\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 9356,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9388,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 9472,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9482,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 12301,
+      "length": 41,
+      "value": "\"evo-apigw\/admin\/API\/DMS\/Ptz\/SitPosition\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 12383,
+      "length": 41,
+      "value": "\"evo-apigw\/admin\/API\/DMS\/Ptz\/SitPosition\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 12941,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 12973,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 13057,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 13067,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 13361,
+      "length": 43,
+      "value": "\"evo-apigw\/admin\/API\/DMS\/Ptz\/OperateCamera\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 13445,
+      "length": 43,
+      "value": "\"evo-apigw\/admin\/API\/DMS\/Ptz\/OperateCamera\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 14049,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 14081,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 14165,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 14175,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 14463,
+      "length": 43,
+      "value": "\"evo-apigw\/admin\/API\/DMS\/Ptz\/OperateDirect\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 14547,
+      "length": 43,
+      "value": "\"evo-apigw\/admin\/API\/DMS\/Ptz\/OperateDirect\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 14795,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 15146,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 15178,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 15262,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 15272,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 15560,
+      "length": 48,
+      "value": "\"evo-apigw\/admin\/API\/DMS\/Ptz\/OperatePresetPoint\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 15649,
+      "length": 48,
+      "value": "\"evo-apigw\/admin\/API\/DMS\/Ptz\/OperatePresetPoint\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 15825,
+      "length": 17,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 15841,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 16050,
+      "length": 12,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 16061,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 16102,
+      "length": 12,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 16113,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 16376,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 16408,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 16492,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 16502,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 16744,
+      "length": 45,
+      "value": "\"evo-apigw\/admin\/API\/DMS\/Ptz\/GetPresetPoints\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 16830,
+      "length": 45,
+      "value": "\"evo-apigw\/admin\/API\/DMS\/Ptz\/GetPresetPoints\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 16930,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 17802,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 17834,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 17918,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 17928,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 18210,
+      "length": 9,
+      "value": "\"evo-brm\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 18252,
+      "length": 52,
+      "value": "\"evo-apigw\/evo-brm\/\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 18281,
+      "length": 1,
+      "value": "\"\/tree\/client\/root-node\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 18915,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 18947,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 19031,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 19041,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 19342,
+      "length": 9,
+      "value": "\"evo-brm\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 19384,
+      "length": 42,
+      "value": "\"evo-apigw\/evo-brm\/\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 19413,
+      "length": 1,
+      "value": "\"\/device\/list\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 19838,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 19870,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 19954,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 19964,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 27480,
+      "length": 45,
+      "value": "\"\/evo-apigw\/admin\/API\/BRM\/Device\/GetMediaVKs\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "Array",
+      "offset": 28000,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 28163,
+      "length": 43,
+      "value": "\"\/evo-apigw\/admin\/API\/BRM\/User\/GetUserData\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 28327,
+      "length": 10,
+      "value": "\"view.xml\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 28503,
+      "length": 6,
+      "value": "\"View\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 28541,
+      "length": 8,
+      "value": "\"rootId\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 28646,
+      "length": 4,
+      "value": "\"\n\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 28698,
+      "length": 10,
+      "value": "\"\n<Root>\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 28764,
+      "length": 11,
+      "value": "\"\n<\/Root>\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "BooleanLiteral",
+      "offset": 28848,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "BooleanLiteral",
+      "offset": 28924,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "BooleanLiteral",
+      "offset": 28998,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 29140,
+      "length": 12,
+      "value": "\"Department\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 29343,
+      "length": 7,
+      "value": "\"_name\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 29418,
+      "length": 5,
+      "value": "\"_id\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 29439,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 29496,
+      "length": 6,
+      "value": "\"View\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 29844,
+      "length": 9,
+      "value": "\"_module\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 29988,
+      "length": 9,
+      "value": "\"_module\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 30196,
+      "length": 6,
+      "value": "\"View\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 30649,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 30681,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 30765,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 30775,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 30956,
+      "length": 7,
+      "value": "\"_name\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 31010,
+      "length": 5,
+      "value": "\"_id\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 31031,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 31069,
+      "length": 10,
+      "value": "\"_windows\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 31126,
+      "length": 9,
+      "value": "\"_module\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 31183,
+      "length": 8,
+      "value": "\"Window\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 31367,
+      "length": 9,
+      "value": "\"Channel\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 31468,
+      "length": 5,
+      "value": "\"_id\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 31489,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 31551,
+      "length": 12,
+      "value": "\"_subStream\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 31633,
+      "length": 8,
+      "value": "\"_wndNO\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 31991,
+      "length": 3,
+      "value": "\"$\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 32023,
+      "length": 4,
+      "value": "\"id\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 32030,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 32060,
+      "length": 8,
+      "value": "\"method\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 32071,
+      "length": 20,
+      "value": "\"dev.getPointTemper\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 32120,
+      "length": 8,
+      "value": "\"params\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 32132,
+      "length": 8,
+      "value": "\"ChnlNo\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 32166,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 32210,
+      "length": 7,
+      "value": "\"DevID\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 32240,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 32283,
+      "length": 4,
+      "value": "\"nX\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 32343,
+      "length": 4,
+      "value": "\"nY\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 32866,
+      "length": 47,
+      "value": "\"\/evo-apigw\/admin\/API\/DMS\/Device\/TransportData\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 33201,
+      "length": 3,
+      "value": "\"$\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 33215,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 33277,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 33587,
+      "length": 8,
+      "value": "\"params\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 33636,
+      "length": 12,
+      "value": "\"TemperAver\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 33789,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 33799,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 33903,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 33935,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 34019,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 34029,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 34365,
+      "length": 62,
+      "value": "\"\/evo-apigw\/brms\/api\/v1.1\/device\/channel\/audio-light\/regulate\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 34543,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 34547,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 34770,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 34802,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 35202,
+      "length": 50,
+      "value": "\"\/evo-apigw\/admin\/API\/DMS\/Alarm\/SetAlarmOutStatus\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 35501,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 35505,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 35550,
+      "length": 3,
+      "value": "\"0\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 35746,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 35778,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 36107,
+      "length": 86,
+      "value": "\"\/evo-apigw\/brms\/api\/v1.1\/alarm\/plan\/source\/\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 36163,
+      "length": 1,
+      "value": "\"\/alarm-type\/soft-trigger\/list\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 36702,
+      "length": 3,
+      "value": "\"\/\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 36713,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 36791,
+      "length": 2,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 37076,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 37108,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 37208,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 37218,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 37493,
+      "length": 54,
+      "value": "\"\/evo-apigw\/brms\/api\/v1.1\/alarm\/soft-trigger\/generate\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "StringLiteral",
+      "offset": 37867,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "IntegerLiteral",
+      "offset": 37899,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterDevice\/Service\/DPRestProSDKDataAdapterDeviceSwift.swift",
+      "kind": "BooleanLiteral",
+      "offset": 38004,
+      "length": 4,
+      "value": "true"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ICCDataAdapterUser
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import CommonLib
+import ICCDataAdapterCore
+@_exported import ICCDataAdapterUser
+import ICCPlatformSDKSwift
+import ObjectMapper
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+@_inheritsConvenienceInitializers @objc public class DPRestProSDKDataAdapterUserDetail : ObjectiveC.NSObject, ICCDataAdapterProtocol.DataAdapterUserDetailProtocol {
+  @objc public func getGrantedDevicesAndChannels() throws -> [Swift.String : [Swift.String]]
+  @objc public static func getTempToken(_ sid: Swift.String?) -> Swift.String?
+  @objc public func requestIotMqttAddress() throws -> Swift.String
+  @objc public func updateAppConfigMenuList(withMenus menus: [ICCDataAdapterProtocol.DSSAppConfigMenuInfo]) throws
+  @objc public func updateAppConfigCardList(withCards cards: [ICCDataAdapterProtocol.DSSAppConfigCardInfo]) throws
+  @objc public func getAppConfigMenuList() throws -> [ICCDataAdapterProtocol.DSSAppConfigMenuInfo]
+  @objc public func getAppConfigCardList() throws -> [ICCDataAdapterProtocol.DSSAppConfigCardInfo]
+  @objc public func getUserSelectedModuleArray() throws -> [ICCDataAdapterProtocol.DSSModuleInfo]
+  @objc public func updateUserSelectedModuleArray(_ moduleArray: [ICCDataAdapterProtocol.DSSModuleInfo]) throws
+  @objc public func requestMenuList(_ isUseCache: Swift.Bool, userAdapter: any ICCDataAdapterProtocol.UserAdapterUserProtocol) throws -> [ICCDataAdapterProtocol.DSSMajorMenuInfo]
+  @objc public func requestCardList(_ persionId: Swift.Int32) throws -> [ICCDataAdapterProtocol.DSSCardInfo]
+  @objc public func uploadLocationWtihLongitude(_ longitude: Swift.Double, latitude: Swift.Double) throws
+  public func requestUserDetail() throws -> ICCDataAdapterProtocol.DSSUserInfo
+  @objc public static func getMccsProductInfo() -> [Swift.String : Any]?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class RestSwiftSDKDataAdapterUser : ObjectiveC.NSObject, ICCDataAdapterProtocol.DataAdapterUserDetailProtocol {
+  @objc public func getGrantedDevicesAndChannels() throws -> [Swift.String : [Swift.String]]
+  @objc public static func getTempToken(_ sid: Swift.String?) -> Swift.String?
+  @objc public func requestIotMqttAddress() throws -> Swift.String
+  @objc public func updateAppConfigMenuList(withMenus menus: [ICCDataAdapterProtocol.DSSAppConfigMenuInfo]) throws
+  @objc public func updateAppConfigCardList(withCards cards: [ICCDataAdapterProtocol.DSSAppConfigCardInfo]) throws
+  @objc public func getAppConfigMenuList() throws -> [ICCDataAdapterProtocol.DSSAppConfigMenuInfo]
+  @objc public func getAppConfigCardList() throws -> [ICCDataAdapterProtocol.DSSAppConfigCardInfo]
+  @objc public func getUserSelectedModuleArray() throws -> [ICCDataAdapterProtocol.DSSModuleInfo]
+  @objc public func updateUserSelectedModuleArray(_ moduleArray: [ICCDataAdapterProtocol.DSSModuleInfo]) throws
+  @objc public func requestMenuList(_ isUseCache: Swift.Bool, userAdapter: any ICCDataAdapterProtocol.UserAdapterUserProtocol) throws -> [ICCDataAdapterProtocol.DSSMajorMenuInfo]
+  @objc public func requestCardList(_ persionId: Swift.Int32) throws -> [ICCDataAdapterProtocol.DSSCardInfo]
+  @objc public func uploadLocationWtihLongitude(_ longitude: Swift.Double, latitude: Swift.Double) throws
+  @objc public static func getMccsProductInfo() -> [Swift.String : Any]?
+  @objc public func private_firstLogin(name: Swift.String, password: Swift.String, host: Swift.String, port: Swift.Int) throws -> [Swift.String : Swift.String]
+  @objc public func private_secondPhoneLogin(name: Swift.String, password: Swift.String, host: Swift.String, port: Swift.Int, loginInfo: [Swift.String : Swift.String], block: (_ userId: Swift.String?, _ expires_in: Swift.Int, _ access_token: Swift.String?, _ magicId: Swift.String?, _ refresh_token: Swift.String?, _ token_type: Swift.String?) -> Swift.Void) throws
+  @objc public func private_secondLogin(name: Swift.String, password: Swift.String, host: Swift.String, port: Swift.Int, loginInfo: [Swift.String : Swift.String], block: (_ userId: Swift.String?, _ expires_in: Swift.Int, _ access_token: Swift.String?, _ magicId: Swift.String?, _ refresh_token: Swift.String?, _ token_type: Swift.String?) -> Swift.Void) throws
+  @objc public func subScribMqInfoByCategory(userId: Swift.String, userName: Swift.String, arraySubCategory: [Swift.String]) throws
+  @objc public func getAccessToken(name: Swift.String, host: Swift.String, port: Swift.Int, block: (_ userId: Swift.String?, _ expires_in: Swift.Int, _ access_token: Swift.String?, _ magicId: Swift.String?, _ refresh_token: Swift.String?, _ token_type: Swift.String?) -> Swift.Void) throws
+  @objc public func destroyToken(_ token: Swift.String) throws
+  @objc public func changeLoginPassword(name: Swift.String, newPassword: Swift.String, oldPassword: Swift.String, publicKey: Swift.String) throws
+  @objc public func getMQConfig(block: (_ serverURIs: Swift.String?, _ name: Swift.String?) -> Swift.Void) throws
+  @objc public func getUserMenuRight(menuRightBlock: (_ strMenu: Swift.String) -> Swift.Int, block: (_ strMenuArr: [Swift.String], _ projectId: Swift.String, _ mccsMenus: [ICCDataAdapterProtocol.DSSMccsMenuInfo], _ menuRights: [Foundation.NSNumber : Foundation.NSNumber]) -> Swift.Void) throws
+  @objc public func getBRMVersion(block: (_ brmVersion: Swift.String, _ platformVersion: Swift.String) -> Swift.Void) throws
+  @objc public func getSystemUrl() throws
+  @objc public func requestSubSystemVersion() throws
+  @objc public func setUserDeviceToken(language: Swift.String, userId: Swift.String) throws
+  @objc public func verifyPassword(loginName: Swift.String, password: Swift.String, publickey: Swift.String) throws
+  @objc public func getHiddenPageInfo() throws -> [Swift.String]
+  @objc public func getUserDetail(userId: Swift.String, userInfo: ICCDataAdapterProtocol.DSSUserInfo) throws
+  @objc public func getSqliteConfig() throws
+  @objc public func changePushStatus(_ pushStatus: Swift.Bool, magicId: Swift.String, userId: Swift.String) throws
+  @objc public func getPushStatus(userId: Swift.String) throws -> ICCDataAdapterProtocol.DSSPushStatusInfo
+  @objc public static func keepAlive(magicId: Swift.String) throws
+  @objc override dynamic public init()
+  @objc deinit
+}

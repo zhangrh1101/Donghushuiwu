@@ -1,0 +1,928 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name DHMediaPlay
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
+@_exported import DHMediaPlay
+import Foundation
+import LCOpenSDKDynamic
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+@objc public enum RecordType : Swift.Int {
+  case unknow
+  case mp4
+  case dav
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class Camera : ObjectiveC.NSObject {
+  @objc public var extraInfo: Any?
+  @objc public var time: Swift.Int
+  @objc public var winIndex: Swift.UInt
+  @objc public var decodeEngine: Swift.Int
+  @objc public var requestId: Swift.String?
+  @objc public var audioChannelId: Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class FileCamera : DHMediaPlay.Camera {
+  @objc public var filePath: Swift.String?
+  @objc public var fileType: Swift.Int
+  @objc public var isEncrypt: Swift.Bool
+  @objc public var psk: Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class LCBaseCamera : DHMediaPlay.Camera {
+  @objc public var accessTok: Swift.String?
+  @objc public var psk: Swift.String?
+  @objc public var deviceID: Swift.String?
+  @objc public var channelNo: Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class LCRTCamera : DHMediaPlay.LCBaseCamera {
+  @objc public var streamType: Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class LCPBCamera : DHMediaPlay.LCBaseCamera {
+  @objc public var beginTime: Swift.Int
+  @objc public var endTime: Swift.Int
+  @objc public var isByFile: Swift.Bool
+  @objc public var isCloud: Swift.Bool
+  @objc public var recordFilelist: [DHMediaPlay.LCPBCameraArg]?
+  @objc public var fileIndex: Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class DSSBaseCamera : DHMediaPlay.Camera {
+  @objc public var dpHandle: Swift.Int
+  @objc public var dpRestToken: Swift.String?
+  @objc public var authorization: Swift.String?
+  @objc public var server_ip: Swift.String?
+  @objc public var server_port: Swift.Int
+  @objc public var cameraID: Swift.String?
+  @objc public var streamType: Swift.Int
+  @objc public var isEncrypt: Swift.Bool
+  @objc public var psk: Swift.String
+  @objc public var bCloudBase: Swift.Bool
+  @objc public var bEVOBase: Swift.Bool
+  @objc public var isUseHttps: Swift.Int
+  @objc public var isUseTls: Swift.Bool
+  @objc public var isroute: Swift.Bool
+  @objc public var userId: Swift.String
+  @objc public var regionId: Swift.String
+  @objc public var domainId: Swift.String
+  @objc public var xOperateCode: Swift.String
+  @objc public var xOperateName: Swift.String
+  @objc public var rangeEnable: Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class DSSRTCamera : DHMediaPlay.DSSBaseCamera {
+  @objc public var mediaType: Swift.Int
+  @objc public var isCheckPermission: Swift.Bool
+  @objc public var startChannelIndex: Swift.Int
+  @objc public var separateNum: Swift.Int
+  @objc public var trackID: Swift.String
+  @objc public var deviceID: Swift.String
+  @objc public var supportStreamType: Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class DSSPBCamera : DHMediaPlay.DSSBaseCamera {
+  @objc public var recordSource: Swift.Int
+  @objc public var isPlayBackByTime: Swift.Bool
+  @objc public var isBack: Swift.Bool
+  @objc public var beginTime: Swift.Int
+  @objc public var endTime: Swift.Int
+  @objc public var needBeginTime: Swift.Int
+  @objc public var recordFilelist: [DHMediaPlay.DSSPBCameraArg]?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class DSSPBCameraArg : ObjectiveC.NSObject {
+  @objc public var filelen: Swift.Double
+  @objc public var fileName: Swift.String?
+  @objc public var ssID: Swift.String
+  @objc public var diskID: Swift.String?
+  @objc public var fileHandler: Swift.Int
+  @objc public var beginTime: Swift.Double
+  @objc public var endTime: Swift.Double
+  @objc public var recordSource: Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class LCPBCameraArg : ObjectiveC.NSObject {
+  @objc public var beginTime: Swift.Int
+  @objc public var endTime: Swift.Int
+  @objc public var recordId: Swift.String?
+  @objc public var recordType: Swift.Int
+  @objc public var deviceId: Swift.String?
+  @objc public var channelNo: Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class RTSPBaseCamera : DHMediaPlay.Camera {
+  @objc public var rtspURL: Swift.String?
+  @objc public var isEncrypt: Swift.Bool
+  @objc public var psk: Swift.String
+  @objc public var userName: Swift.String
+  @objc public var pwd: Swift.String
+  @objc public var isThrowP2PAuthErr: Swift.Bool
+  @objc public var rtspExtInfo: DHMediaPlay.RTSPExtInfo?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class RTSPRTCamera : DHMediaPlay.RTSPBaseCamera {
+  @objc public var userAgent: Swift.String?
+  @objc public var connType: Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class RTSPPBCamera : DHMediaPlay.RTSPBaseCamera {
+  @objc public var offsetTime: Swift.Int
+  @objc public var isReverse: Swift.Bool
+  @objc public var speed: Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class RTSPExtInfo : ObjectiveC.NSObject {
+  @objc public var deviceSN: Swift.String
+  @objc public var channelId: Swift.Int
+  @objc public var streamType: Swift.Int
+  @objc public var isUseRep: Swift.Bool
+  @objc public var isForceMts: Swift.Bool
+  @objc public var isOpt: Swift.Bool
+  @objc public var beginTime: Swift.Int
+  @objc public var endTime: Swift.Int
+  @objc public var fileId: Swift.String?
+  @objc public var talkSubType: Swift.Int
+  @objc public var talkChannelId: Swift.Int
+  @objc public var talkDeviceType: Swift.String
+  @objc public var isOpenSDKPlatForm: Swift.Bool
+  @objc public var openAPIToken: Swift.String
+  @objc public var openPlayCode: Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class CloudBaseCamera : DHMediaPlay.Camera {
+  @objc public var m3uUrl: Swift.String
+  @objc public var slicePrefix: Swift.String?
+  @objc public var startTime: Swift.Int
+  @objc public var timeout: Swift.Int
+  @objc public var iProtoType: Swift.Int
+  @objc public var speed: Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class CloudPBCamera : DHMediaPlay.CloudBaseCamera {
+  @objc public var isEncrypt: Swift.Bool
+  @objc public var psk: Swift.String
+  @objc public var m3uExtInfo: DHMediaPlay.M3UExtInfo?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class M3UExtInfo : ObjectiveC.NSObject {
+  @objc public var deviceSN: Swift.String
+  @objc public var channelId: Swift.Int
+  @objc public var recordId: Swift.String
+  @objc public var recordType: Swift.String
+  @objc public var recordPath: Swift.String
+  @objc public var region: Swift.String
+  @objc public var isOpenSDKPlatForm: Swift.Bool
+  @objc public var openAPIToken: Swift.String
+  @objc public var openPlayCode: Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class CloudRTCamera : DHMediaPlay.CloudBaseCamera {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class CloudBaseTalk : DHMediaPlay.Camera {
+  @objc public var isroute: Swift.Bool
+  @objc public var userId: Swift.String
+  @objc public var regionId: Swift.String
+  @objc public var domainId: Swift.String
+  @objc public var serverIp: Swift.String
+  @objc public var serverPort: Swift.Int
+  @objc public var dpRestToken: Swift.String
+  @objc public var isUseHttps: Swift.Int
+  @objc public var talkType: Swift.Int
+  @objc public var transMode: Swift.Int
+  @objc public var sampleRate: Swift.Int
+  @objc public var sampleDepth: Swift.Int
+  @objc public var encodeType: Swift.Int
+  @objc public var deviceId: Swift.String
+  @objc public var deviceUuid: Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SipTalkBaseCamera : DHMediaPlay.Camera {
+  @objc public var callType: Swift.Int
+  @objc public var serverIp: Swift.String
+  @objc public var userId: Swift.String
+  @objc public var localIp: Swift.String
+  @objc public var port: Swift.Int
+  @objc public var vPort: Swift.Int
+  @objc public var callId: Swift.Int
+  @objc public var dlgId: Swift.Int
+  @objc public var tId: Swift.Int
+  @objc public var sampleRate: Swift.Int
+  @objc public var sampleDepth: Swift.Int
+  @objc public var encodeType: Swift.Int
+  @objc public var packType: Swift.Int
+  @objc public var isCall: Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class RtpOUdpTalkCamera : DHMediaPlay.SipTalkBaseCamera {
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class DSSRTPSIPTalkCamera : DHMediaPlay.RtpOUdpTalkCamera {
+  @objc public var mediaType: Swift.Int
+  @objc public var dpHandle: Swift.Int
+  @objc public var dpRestToken: Swift.String?
+  @objc public var server_ip: Swift.String?
+  @objc public var server_port: Swift.Int
+  @objc public var cameraID: Swift.String?
+  @objc public var streamType: Swift.Int
+  @objc public var isEncrypt: Swift.Bool
+  @objc public var psk: Swift.String
+  @objc public var isUseHttps: Swift.Int
+  @objc public var deviceID: Swift.String
+  @objc public var isCheckPermission: Swift.Bool
+  @objc public var isUseTls: Swift.Bool
+  @objc public var authorization: Swift.String
+  @objc public var bCloudBase: Swift.Bool
+  @objc public var bEVOBase: Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class SipStreamCamera : DHMediaPlay.SipTalkBaseCamera {
+  @objc public var dpHandle: Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class DirectBaseCamera : DHMediaPlay.Camera {
+  @objc public var channelId: Swift.Int
+  @objc public var userName: Swift.String
+  @objc public var pwd: Swift.String
+  @objc public var streamType: Swift.Int
+  @objc public var loginHandle: Swift.String?
+  @objc public var loginExtInfo: DHMediaPlay.LoginExtInfo?
+  @objc public var isEncrypt: Swift.Bool
+  @objc public var psk: Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class DirectRTCamera : DHMediaPlay.DirectBaseCamera {
+  @objc public var talkWithChannel: Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class DirectPBCamera : DHMediaPlay.DirectBaseCamera {
+  @objc public var startTime: Swift.Int
+  @objc public var endTime: Swift.Int
+  @objc public var recordType: Swift.Int
+  @objc public var isPlayBackByTime: Swift.Bool
+  @objc public var recordFileList: [DHMediaPlay.DHRecordFileInfo]
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class HttpRTCamera : DHMediaPlay.HttpBaseCamera {
+  @objc public var talkHttpAblitily: Swift.Bool
+  @objc public var talkSharedLinkMode: Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class HttpPBCamera : DHMediaPlay.HttpBaseCamera {
+  @objc public var offsetTime: Swift.Int
+  @objc public var isReverse: Swift.Bool
+  @objc public var speed: Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class HttpBaseCamera : DHMediaPlay.Camera {
+  @objc public var httpURL: Swift.String
+  @objc public var isEncrypt: Swift.Bool
+  @objc public var psk: Swift.String
+  @objc public var userName: Swift.String
+  @objc public var pwd: Swift.String
+  @objc public var sharedLinkMode: Swift.Int
+  @objc public var handleKey: Swift.String
+  @objc public var isAuth: Swift.Int
+  @objc public var isTls: Swift.Bool
+  @objc public var isThrowP2PAuthErr: Swift.Bool
+  @objc public var httpExtInfo: DHMediaPlay.HttpExtInfo?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class LoginExtInfo : ObjectiveC.NSObject {
+  @objc public var deviceSN: Swift.String
+  @objc public var port: Swift.Int
+  @objc public var IP: Swift.String
+  @objc public var deviceType: Swift.Int
+  @objc public var isTcpReLay: Swift.Bool
+  @objc public var mLoginType: Swift.Int
+  @objc public var isOpenSDKPlatForm: Swift.Bool
+  @objc public var openAPIToken: Swift.String
+  @objc public var openPlayCode: Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class HttpExtInfo : ObjectiveC.NSObject {
+  @objc public var deviceSN: Swift.String
+  @objc public var channelId: Swift.Int
+  @objc public var streamType: Swift.Int
+  @objc public var isForceMts: Swift.Bool
+  @objc public var isUseRep: Swift.Bool
+  @objc public var beginTime: Swift.Int
+  @objc public var endTime: Swift.Int
+  @objc public var fileId: Swift.String
+  @objc public var subtype: Swift.Int
+  @objc public var deviceType: Swift.String
+  @objc public var talkType: Swift.String
+  @objc public var isOpenSDKPlatForm: Swift.Bool
+  @objc public var openAPIToken: Swift.String
+  @objc public var openPlayCode: Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class CommunityCloudRTCamera : DHMediaPlay.Camera {
+  @objc public var dpRestToken: Swift.String
+  @objc public var serverIP: Swift.String
+  @objc public var userName: Swift.String
+  @objc public var pwd: Swift.String
+  @objc public var serverPort: Swift.Int
+  @objc public var channelId: Swift.String
+  @objc public var communityCode: Swift.String
+  @objc public var streamType: Swift.Int
+  @objc public var deviceType: Swift.Int
+  @objc public var clientType: Swift.Int
+  @objc public var isP2P: Swift.Int
+  @objc public var clientId: Swift.Int
+  @objc public var version: Swift.String
+  @objc public var timeoffset: Swift.Double
+  @objc public var isUseHttps: Swift.Int
+  @objc public var userAgent: Swift.String
+  @objc public var connType: Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class DHCameraAddModel : ObjectiveC.NSObject {
+  @objc public var cameraModel: DHMediaPlay.Camera?
+  @objc public var recordType: DHMediaPlay.RecordType
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class DHRecordFileInfo : ObjectiveC.NSObject {
+  @objc public var channelId: Swift.Int
+  @objc public var frameNum: Swift.Int
+  @objc public var size: Swift.Int
+  @objc public var driveNo: Swift.Int
+  @objc public var startCluster: Swift.Int
+  @objc public var recordFileType: Swift.Int
+  @objc public var importantReCId: Swift.Int
+  @objc public var hint: Swift.Int
+  @objc public var recType: Swift.Int
+  @objc public var fileName: Swift.String
+  @objc public var beginTime: Swift.Int
+  @objc public var endTime: Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class CameraOperation : ObjectiveC.NSObject {
+  @objc public var isUserPaused: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public var isStoped: Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum DHMediaLogLevel : Swift.Int {
+  case fatal = 0
+  case err
+  case warning
+  case info
+  case debug
+  case all
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum DHPlaySDKLogLevel : Swift.Int {
+  case unknow = 0
+  case fatal = 1
+  case err = 2
+  case warning = 3
+  case info = 4
+  case trace = 5
+  case debug = 6
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class DHMediaConfig : ObjectiveC.NSObject {
+  @objc public static let shareInstance: DHMediaPlay.DHMediaConfig
+  @objc public var sEnhanceMode: Swift.Int
+  @objc public var logLevel: DHMediaPlay.DHMediaLogLevel
+  @objc public var playSDKLogLevel: DHMediaPlay.DHPlaySDKLogLevel
+  @objc public var saveStream: Swift.Bool
+  @objc public func updateDNS()
+  @objc public func destroyThreadPool()
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum FISHEYE_MOUNTMODE : Swift.Int {
+  case INVALID = 0
+  case CEIL
+  case WALL
+  case FLOOR
+  case NUM
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum FISHEYE_CALIBRATMODE : Swift.Int {
+  case INVALID = 0
+  case OFF = 1
+  case ORIGINAL = 2
+  case PANORAMA = 3
+  case PANORAMA_PLUS_ONE_EPTZ = 4
+  case DOUBLE_PANORAMA = 5
+  case ORIGINAL_PLUS_DOUBLE_PANORAMA = 6
+  case ORIGINAL_PLUS_THREE_EPTZ_REGION = 7
+  case PANORAMA_PLUS_THREE_EPTZ_REGION = 8
+  case ORIGINAL_PLUS_TWO_EPTZ_REGION = 9
+  case ORIGINAL_PLUS_FOUR_EPTZ_REGION = 10
+  case PANORAMA_PLUS_FOUR_EPTZ_REGION = 11
+  case PANORAMA_PLUS_SIX_EPTZ_REGION = 12
+  case ORIGINAL_PLUS_EIGHT_EPTZ_REGION = 13
+  case PANORAMA_PLUS_EIGHT_EPTZ_REGION = 14
+  case TWO_EPTZ_REGION_WITH_ORIGINAL = 15
+  case FOUR_EPTZ_REGION_WITH_ORIGINAL = 16
+  case DOUBLE_PANORAMA_WITH_ORIGINAL = 17
+  case FOUR_EPTZ_REGION_WITH_PANORAMA = 18
+  case TWO_EPTZ_REGION = 19
+  case SINGLE = 20
+  case FOUR_EPTZ_REGION = 21
+  case USER_DEFINED = 22
+  case PHONE = 23
+  case ORIGINAL_PLUS_ONE_EPTZ_REGION = 24
+  case ONE_EPTZ_REGION = 25
+  case NUM = 26
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum FISHEYE_winType : Swift.Int {
+  case cricle = 0
+  case panorama = 1
+  case subWindow = 2
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol DHMediaPlayUIDelegate {
+  @objc optional func playViewBorderNormalColor(winIndex: Swift.UInt) -> UIKit.UIColor
+  @objc optional func playViewBorderSelectedColor(winIndex: Swift.UInt) -> UIKit.UIColor
+  @objc optional func playViewBorderNormalWidth(winIndex: Swift.UInt) -> CoreFoundation.CGFloat
+  @objc optional func playViewBorderSelectedWidth(winIndex: Swift.UInt) -> CoreFoundation.CGFloat
+  @objc optional func playViewWindowNormalBGColor(winIndex: Swift.UInt) -> UIKit.UIColor
+  @objc optional func playViewWindowSelectedBGColor(winIndex: Swift.UInt) -> UIKit.UIColor
+  @objc optional func playViewAddBtnImage(winIndex: Swift.UInt) -> UIKit.UIImage?
+  @objc optional func playViewReplayBtnImage(winIndex: Swift.UInt) -> UIKit.UIImage?
+  @objc optional func playViewRefreshBtnImage(winIndex: Swift.UInt) -> UIKit.UIImage?
+  @objc optional func playViewLockBtnImage(winIndex: Swift.UInt) -> UIKit.UIImage?
+  @objc optional func playViewLockDeviceBtnImage(winIndex: Swift.UInt) -> UIKit.UIImage?
+  @objc optional func playView(_ playView: DHMediaPlay.DHMediaPlayView, cellFor winIndex: Swift.UInt) -> DHMediaPlay.DHPlayCell
+  @objc optional func needAnimationView(winIndex: Swift.UInt) -> Swift.Bool
+  @objc optional func animationImages(winIndex: Swift.UInt) -> [UIKit.UIImage]?
+}
+@objc public enum PlayStatusType : Swift.Int {
+  case eUnknow
+  case ePlayFirstFrame
+  case ePlayEnd
+  case eNetworkaAbort
+  case ePlayFailed
+  case eBadFile
+  case eSeekFailed
+  case eSeekSuccess
+  case eSeekCrossBorder
+  case ePlayDataOver
+  case ePlayNoAuthority
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol DHPlayListenerProtocol : ObjectiveC.NSObjectProtocol {
+  @objc optional func onPlayeStatusCallback(_ winIndex: Swift.UInt, status: DHMediaPlay.PlayStatusType, code: Swift.Int)
+  @objc optional func onPlayeStatusCallback(_ winIndex: Swift.UInt, status: DHMediaPlay.PlayStatusType, codeStr: Swift.String)
+  @objc optional func onPlayBegin(_ winIndex: Swift.UInt)
+  @objc optional func onPlayFinish(_ winIndex: Swift.UInt)
+  @objc optional func onReceiveBitrate(_ winIndex: Swift.UInt, bitrate: Swift.Int)
+  @objc optional func onPlayTime(_ winIndex: Swift.UInt, time: Swift.Int)
+  @objc optional func onFileTime(_ winIndex: Swift.UInt, startTime: Swift.Int, endTime: Swift.Int)
+  @objc optional func onAudio(_ winIndex: Swift.UInt, open: Swift.Bool)
+  @objc optional func onRecordStop(_ winIndex: Swift.UInt)
+  @objc optional func onReplay(_ winIndex: Swift.UInt)
+  @objc optional func onPause(_ winIndex: Swift.UInt)
+  @objc optional func onResume(_ winIndex: Swift.UInt)
+  @objc optional func onStop(_ winIndex: Swift.UInt)
+  @objc optional func onResolutionChanged(_ width: Swift.Int, height: Swift.Int, index: Swift.Int)
+  @objc optional func onProgressStatus(_ winIndex: Swift.UInt, status: Swift.String)
+  @objc optional func onStreamLogInfo(_ winIndex: Swift.UInt, message: Swift.String)
+}
+@objc public enum PtzOperation : Swift.Int {
+  case begin
+  case zoomIn
+  case zoomOut
+  case directionLeft
+  case directionRight
+  case directionUp
+  case directionDown
+  case directionLeftUp
+  case directionLeftDown
+  case directionRightUp
+  case directionRightDown
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol DHPTZListenerProtocol : ObjectiveC.NSObjectProtocol {
+  @objc optional func onPTZControl(_ winIndex: Swift.UInt, ptzType: DHMediaPlay.PtzOperation, stop: Swift.Bool)
+  @objc optional func on3DPositionControl(_ winIndex: Swift.UInt, x: CoreFoundation.CGFloat, y: CoreFoundation.CGFloat, z: CoreFoundation.CGFloat)
+  @objc optional func on3DPositionControl(_ winIndex: Swift.UInt, windowWidth: CoreFoundation.CGFloat, windowHeight: CoreFoundation.CGFloat, boxWidth: CoreFoundation.CGFloat, boxHeight: CoreFoundation.CGFloat, boxMidx: CoreFoundation.CGFloat, boxMidy: CoreFoundation.CGFloat, zoomOut: Swift.Bool)
+}
+@objc public enum TalkResultType : Swift.Int {
+  case eTalkFailed
+  case eTalkSuccess
+  case eTalkAudioSessionId
+  case eTalkAudioPort
+  case eTalkVideoSessionId
+  case eTalkVideoPort
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol DHTalkListenerProtocol : ObjectiveC.NSObjectProtocol {
+  @objc optional func onProgressStatus(_ status: Swift.String)
+  @objc optional func onStreamLogInfo(_ message: Swift.String)
+  @objc optional func onTalkResult(_ winIndex: Swift.UInt, result: DHMediaPlay.TalkResultType, code: Swift.Int)
+  @objc optional func onSipTalkResult(_ winIndex: Swift.UInt, result: DHMediaPlay.TalkResultType, data: Swift.String)
+}
+@objc public enum WinControlType : Swift.Int {
+  case add
+  case refresh
+  case replay
+  case lock
+  case deviceLock
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum PageChangeType : Swift.Int {
+  case maximize
+  case minimize
+  case scroll
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol DHWindowListenerProtocol : ObjectiveC.NSObjectProtocol {
+  @objc optional func onControlClick(_ winIndex: Swift.UInt, type: DHMediaPlay.WinControlType)
+  @objc optional func onSwapCell(moveWinIndex: Swift.UInt, desWinIndex: Swift.UInt, oldPosition: Swift.UInt, desPosition: Swift.UInt)
+  @objc optional func onWindowSelectChanged(newWinIndex: Swift.UInt, oldWinIndex: Swift.UInt)
+  @objc optional func onWindowSelected(position: Swift.UInt)
+  @objc optional func onPageChange(newPage: Swift.UInt, oldPage: Swift.UInt, totalPages: Swift.UInt, type: DHMediaPlay.PageChangeType)
+  @objc optional func onRemoveCamera(_ winIndex: Swift.UInt)
+  @objc optional func onEZoom(_ winIndex: Swift.UInt, open: Swift.Bool)
+  @objc optional func onDoubleClick(_ winIndex: Swift.UInt)
+  @objc optional func fishEyeDragWithPoint(_ winIndex: Swift.UInt, point: CoreFoundation.CGPoint)
+  @objc optional func fishEyeDragBeginWithPoint(_ winIndex: Swift.UInt, point: CoreFoundation.CGPoint)
+  @objc optional func fishEyeDragEnd(_ winIndex: Swift.UInt)
+  @objc optional func volumeBrightnessControled(_ controlType: DHMediaPlay.ControlType, value: Swift.Float)
+  @objc optional func volumeBrightnessEnded()
+  @objc optional func onTemperatureClicked(_ winIndex: Swift.UInt, point: CoreFoundation.CGPoint, pointIn8192: CoreFoundation.CGPoint)
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) public class DHMediaPlayView : UIKit.UIView {
+  @objc deinit
+  @objc @_Concurrency.MainActor(unsafe) weak public var UIDelegate: (any DHMediaPlay.DHMediaPlayUIDelegate)? {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) public func resetCellUI()
+  @objc @_Concurrency.MainActor(unsafe) public func reloadPlayView()
+  @objc @_Concurrency.MainActor(unsafe) public func dequeuePlayCell(winIndex: Swift.UInt) -> DHMediaPlay.DHPlayCell?
+  @objc @_Concurrency.MainActor(unsafe) public var resetPlayStatesWhenMaxOrMin: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) public var canRemoveCameraByTrash: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) public var needAutoAppendPage: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) public var defultSplitNumber: Swift.UInt {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) public var currentPage: Swift.UInt {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) public var currentPageCount: Swift.UInt {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor(unsafe) public var currentSplitNumber: Swift.UInt {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor(unsafe) public var selectedWinIndex: Swift.UInt {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) public var hidePageCountView: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) public var pageCountViewLocation: DHMediaPlay.PageCountViewLocation {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) public var shouldSendBitrate: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) public var autoAdjustResolution: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) public func addTalkListener(_ listener: any DHMediaPlay.DHTalkListenerProtocol)
+  @objc @_Concurrency.MainActor(unsafe) public func removeTalkListener(_ listener: any DHMediaPlay.DHTalkListenerProtocol)
+  @objc @_Concurrency.MainActor(unsafe) public func addPlayListener(_ listener: any DHMediaPlay.DHPlayListenerProtocol)
+  @objc @_Concurrency.MainActor(unsafe) public func removePlayListener(_ listener: any DHMediaPlay.DHPlayListenerProtocol)
+  @objc @_Concurrency.MainActor(unsafe) public func addWindowListener(_ listener: any DHMediaPlay.DHWindowListenerProtocol)
+  @objc @_Concurrency.MainActor(unsafe) public func removeWindowListener(_ listener: any DHMediaPlay.DHWindowListenerProtocol)
+  @objc @_Concurrency.MainActor(unsafe) public func addPTZListener(_ listener: any DHMediaPlay.DHPTZListenerProtocol)
+  @objc @_Concurrency.MainActor(unsafe) public func removePTZListener(_ listener: any DHMediaPlay.DHPTZListenerProtocol)
+  @objc @_Concurrency.MainActor(unsafe) public func getCamera(_ winIndex: Swift.UInt) -> DHMediaPlay.Camera?
+  @objc @_Concurrency.MainActor(unsafe) public func getCameraOperation(_ winIndex: Swift.UInt) -> DHMediaPlay.CameraOperation?
+  @objc @_Concurrency.MainActor(unsafe) public func getPlayHandle(_ winIndex: Swift.UInt) -> Foundation.NSNumber
+  @objc @_Concurrency.MainActor(unsafe) public func getLoginHandle(_ winIndex: Swift.UInt) -> Foundation.NSNumber
+  @objc @_Concurrency.MainActor(unsafe) public func getAllCamera() -> [DHMediaPlay.Camera]
+  @objc @_Concurrency.MainActor(unsafe) public func getPosition(_ winIndex: Swift.UInt) -> Swift.UInt
+  @objc @_Concurrency.MainActor(unsafe) public func getWinIndex(by position: Swift.UInt) -> Swift.UInt
+  @objc @_Concurrency.MainActor(unsafe) public func getCustomView(_ winIndex: Swift.UInt) -> UIKit.UIView
+  @objc @_Concurrency.MainActor(unsafe) public func startTalk(_ winIndex: Swift.UInt) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public func startChannelTalk(_ winIndex: Swift.UInt) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public func stopTalk(_ winIndex: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func startSampleAudio(_ winIndex: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func stopSampleAudio(_ winIndex: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func startTalkSound(_ winIndex: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func setSpeakerAutoEnable(_ enable: Swift.Bool)
+  @objc @_Concurrency.MainActor(unsafe) public func stopTalkSound(_ winIndex: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func getRecvAudioCallBack() -> Swift.Int
+  @objc @_Concurrency.MainActor(unsafe) public func addCamera(_ camera: DHMediaPlay.Camera, at winIndex: Swift.UInt, recordType: DHMediaPlay.RecordType)
+  @objc @_Concurrency.MainActor(unsafe) public func addBatchCameras(_ camerasModelArray: [DHMediaPlay.DHCameraAddModel])
+  @objc @_Concurrency.MainActor(unsafe) public func removeCamera(_ winIndex: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func removeAllCamera()
+  @objc @_Concurrency.MainActor(unsafe) public func setDisPlayRegion(_ winIndex: Swift.UInt, enable: Swift.Bool)
+  @objc @_Concurrency.MainActor(unsafe) public func play(_ winIndex: Swift.UInt) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public func changePlayParams(_ winIndex: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func playAll() -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public func playBackDirectSeek(_ winIndex: Swift.UInt, time startTime: Swift.UInt) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public func setKey(_ key: Swift.String, winIndex: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func isPlaying(_ winIndex: Swift.UInt) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public func isPlayBegin(_ winIndex: Swift.UInt) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public func isTalking(_ winIndex: Swift.UInt) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public func isLoading(_ winIndex: Swift.UInt) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public func isPaused(_ winIndex: Swift.UInt) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public func getPlayerStatusSDK(winIndex: Swift.UInt) -> Swift.Int
+  @objc @_Concurrency.MainActor(unsafe) public func setEnableElectricZoom(_ winIndex: Swift.UInt, enable: Swift.Bool)
+  @objc @_Concurrency.MainActor(unsafe) public func setEnableElectricZoomGlobal(_ enable: Swift.Bool)
+  @objc @_Concurrency.MainActor(unsafe) public func resetEZoomScale(_ winIndex: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func EZoomIgnoreMaxState(ignore: Swift.Bool)
+  @objc @_Concurrency.MainActor(unsafe) public func isEZooming(_ winIndex: Swift.UInt) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public func cellIsVisible(_ winIndex: Swift.UInt) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public func setEnablePtz(_ winIndex: Swift.UInt, enable: Swift.Bool)
+  @objc @_Concurrency.MainActor(unsafe) public func setEnable3DPosition(_ winIndex: Swift.UInt, enable: Swift.Bool)
+  @objc @_Concurrency.MainActor(unsafe) public func setEnableTemperature(_ winIndex: Swift.UInt, enable: Swift.Bool)
+  @objc @_Concurrency.MainActor(unsafe) public func setEnableFreezeMode(_ enable: Swift.Bool)
+  @objc @_Concurrency.MainActor(unsafe) public func setEnableFreezeMode(_ winIndex: Swift.UInt, enable: Swift.Bool)
+  @objc @_Concurrency.MainActor(unsafe) public func setAllBtnHidden(_ winIndex: Swift.UInt, hidden: Swift.Bool)
+  @objc @_Concurrency.MainActor(unsafe) public func stop(_ winIndex: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func stopAll()
+  @objc @_Concurrency.MainActor(unsafe) public func openAudio(_ winIndex: Swift.UInt) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public func closeAudio(_ winIndex: Swift.UInt) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public func getAudioChannelNum(_ winIndex: Swift.UInt) -> Swift.Int
+  @objc @_Concurrency.MainActor(unsafe) public func chooseAudioChannel(_ winIndex: Swift.UInt, channelId: Swift.Int)
+  @objc @_Concurrency.MainActor(unsafe) public func isAudioOpened(_ winIndex: Swift.UInt) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public func isOptHandleOK(winIndex: Swift.UInt) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public func fishEyeEnable(_ winIndex: Swift.UInt) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public func setEnableFishEye(_ winIndex: Swift.UInt, enable: Swift.Bool)
+  @objc @_Concurrency.MainActor(unsafe) public func setOptFisheye(_ winIndex: Swift.UInt, mainMountModel: Swift.Int, mainCalibrateModel: Swift.Int)
+  @objc @_Concurrency.MainActor(unsafe) public func refshEyePointLineView()
+  @objc @_Concurrency.MainActor(unsafe) public func isFishEyeStream(_ winIndex: Swift.UInt) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public func startFishEye(_ winIndex: Swift.UInt, x: Swift.Float, y: Swift.Float) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public func doingFishEye(_ winIndex: Swift.UInt, x: Swift.Float, y: Swift.Float)
+  @objc @_Concurrency.MainActor(unsafe) public func endFishEye(_ winIndex: Swift.UInt) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public func isFishEyeOpen(_ winIndex: Swift.UInt) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public func seek(_ winIndex: Swift.UInt, by time: Foundation.TimeInterval) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public func setPlaySpeed(_ speed: Swift.Float, at winIndex: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func getPlaySpeed(_ winIndex: Swift.UInt) -> Swift.Float
+  @objc @_Concurrency.MainActor(unsafe) public func playNextFrame(_ winIndex: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func playContinuousFrame(_ winIndex: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func pause(_ winIndex: Swift.UInt) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public func resume(_ winIndex: Swift.UInt) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public func playBackAddFileList(_ winIndex: Swift.UInt, recordFileArray: [DHMediaPlay.DHRecordFileInfo]) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public func maximize(_ winIndex: Swift.UInt, animate: Swift.Bool = false)
+  @objc @_Concurrency.MainActor(unsafe) public func minimize(animate: Swift.Bool = false)
+  @objc @_Concurrency.MainActor(unsafe) public var isMaximized: Swift.Bool {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor(unsafe) public var shouldDoubleClick: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) public func setPlaysetViewProportion(width: Swift.UInt, height: Swift.UInt, winIndex: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func setHost(_ host: Swift.String?, userName: Swift.String?)
+  @objc @_Concurrency.MainActor(unsafe) public func snapshot(_ winIndex: Swift.UInt, filePath: Swift.String? = nil) -> Swift.String?
+  @objc @_Concurrency.MainActor(unsafe) public func snapshotWithoutSuond(_ winIndex: Swift.UInt, filePath: Swift.String? = nil) -> Swift.String?
+  @objc @_Concurrency.MainActor(unsafe) public func startRecord(_ winIndex: Swift.UInt, filePath: Swift.String? = nil, withAudio: Swift.Bool = true) -> Swift.String?
+  @objc @_Concurrency.MainActor(unsafe) public func startRecord(_ winIndex: Swift.UInt, filePath: Swift.String? = nil, recordType: DHMediaPlay.RecordType = .unknow) -> Swift.String?
+  @objc @_Concurrency.MainActor(unsafe) public func stopRecord(_ winIndex: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func isRecording(_ winIndex: Swift.UInt) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) public func setRealPlayPolicy(_ realPlayPolicy: Swift.Int, playPolicy: Swift.Int, waitTime: Swift.Int, winIndex: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func setDecodeEngineType(decodeType: Swift.Int, winIndex: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func showWaitProgress(_ winIndex: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func showCenterBtn(_ winIndex: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func showAddCameraBtn(_ winIndex: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func showReplayBtn(_ winIndex: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func showRefreshBtn(_ winIndex: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func showLockBtn(_ winIndex: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func showDeviceLockBtn(_ winIndex: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func hideWaitProgress(_ winIndex: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func hideAddCameraBtn(_ winIndex: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func hideReplayBtn(_ winIndex: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func hideRefreshBtn(_ winIndex: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func hideLockBtn(_ winIndex: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func swithWindow(from oldPosition: Swift.UInt, to newPosition: Swift.UInt)
+  @objc @_Concurrency.MainActor(unsafe) public func setDefultSplitNumber(_ defultSplitNumber: Swift.UInt, animate: Swift.Bool)
+  @objc @_Concurrency.MainActor(unsafe) public func setCenterBtnWidth(_ width: Swift.Int)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+}
+extension DHMediaPlay.DHMediaPlayView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func layoutSubviews()
+}
+@objc public enum SlidingDirection : Swift.Int {
+  case leftOrRight
+  case upOrDown
+  case none
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum ControlType : Swift.Int {
+  case notdeal
+  case volume
+  case brightness
+  case scorll
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc @_Concurrency.MainActor(unsafe) open class DHPlayCell : UIKit.UIView, UIKit.UIGestureRecognizerDelegate {
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) public var customView: UIKit.UIView!
+  @objc @IBOutlet @_Concurrency.MainActor(unsafe) weak public var centerBtn: UIKit.UIButton!
+  @_Concurrency.MainActor(unsafe) @objc override required dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) open func activityViewAnimate(animate: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc public func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) open func onStopOrRemoveCamera()
+  @objc deinit
+}
+@objc public enum PageCountViewStyle : Swift.Int {
+  case pageControlAndLabel
+  case label
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum PageCountViewLocation : Swift.Int {
+  case top
+  case bottom
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class DHPlayConfig : ObjectiveC.NSObject {
+  @objc public static let shareInstance: DHMediaPlay.DHPlayConfig
+  @objc public var borderNormalColor: UIKit.UIColor
+  @objc public var borderSelectedColor: UIKit.UIColor
+  @objc public var borderNormalWidth: CoreFoundation.CGFloat
+  @objc public var borderSelectedWidth: CoreFoundation.CGFloat
+  @objc public var windowNormalBGColor: UIKit.UIColor
+  @objc public var windowSelectedBGColor: UIKit.UIColor
+  @objc public var trashViewBGColor: UIKit.UIColor
+  @objc public var trashViewText: Swift.String?
+  @objc public var trashViewSelectText: Swift.String?
+  @objc public var addBtnImage: UIKit.UIImage?
+  @objc public var addBtnHighlightedImage: UIKit.UIImage?
+  @objc public var replayBtnImage: UIKit.UIImage?
+  @objc public var replayBtnHighlightedImage: UIKit.UIImage?
+  @objc public var refreshBtnImage: UIKit.UIImage?
+  @objc public var lockBtnImage: UIKit.UIImage?
+  @objc public var deviceLockBtnImage: UIKit.UIImage?
+  @objc public var maxWindowCount: Swift.UInt
+  @objc public var pageCountViewStyle: DHMediaPlay.PageCountViewStyle
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension DHMediaPlay.RecordType : Swift.Equatable {}
+extension DHMediaPlay.RecordType : Swift.Hashable {}
+extension DHMediaPlay.RecordType : Swift.RawRepresentable {}
+extension DHMediaPlay.DHMediaLogLevel : Swift.Equatable {}
+extension DHMediaPlay.DHMediaLogLevel : Swift.Hashable {}
+extension DHMediaPlay.DHMediaLogLevel : Swift.RawRepresentable {}
+extension DHMediaPlay.DHPlaySDKLogLevel : Swift.Equatable {}
+extension DHMediaPlay.DHPlaySDKLogLevel : Swift.Hashable {}
+extension DHMediaPlay.DHPlaySDKLogLevel : Swift.RawRepresentable {}
+extension DHMediaPlay.FISHEYE_MOUNTMODE : Swift.Equatable {}
+extension DHMediaPlay.FISHEYE_MOUNTMODE : Swift.Hashable {}
+extension DHMediaPlay.FISHEYE_MOUNTMODE : Swift.RawRepresentable {}
+extension DHMediaPlay.FISHEYE_CALIBRATMODE : Swift.Equatable {}
+extension DHMediaPlay.FISHEYE_CALIBRATMODE : Swift.Hashable {}
+extension DHMediaPlay.FISHEYE_CALIBRATMODE : Swift.RawRepresentable {}
+extension DHMediaPlay.FISHEYE_winType : Swift.Equatable {}
+extension DHMediaPlay.FISHEYE_winType : Swift.Hashable {}
+extension DHMediaPlay.FISHEYE_winType : Swift.RawRepresentable {}
+extension DHMediaPlay.PlayStatusType : Swift.Equatable {}
+extension DHMediaPlay.PlayStatusType : Swift.Hashable {}
+extension DHMediaPlay.PlayStatusType : Swift.RawRepresentable {}
+extension DHMediaPlay.PtzOperation : Swift.Equatable {}
+extension DHMediaPlay.PtzOperation : Swift.Hashable {}
+extension DHMediaPlay.PtzOperation : Swift.RawRepresentable {}
+extension DHMediaPlay.TalkResultType : Swift.Equatable {}
+extension DHMediaPlay.TalkResultType : Swift.Hashable {}
+extension DHMediaPlay.TalkResultType : Swift.RawRepresentable {}
+extension DHMediaPlay.WinControlType : Swift.Equatable {}
+extension DHMediaPlay.WinControlType : Swift.Hashable {}
+extension DHMediaPlay.WinControlType : Swift.RawRepresentable {}
+extension DHMediaPlay.PageChangeType : Swift.Equatable {}
+extension DHMediaPlay.PageChangeType : Swift.Hashable {}
+extension DHMediaPlay.PageChangeType : Swift.RawRepresentable {}
+extension DHMediaPlay.SlidingDirection : Swift.Equatable {}
+extension DHMediaPlay.SlidingDirection : Swift.Hashable {}
+extension DHMediaPlay.SlidingDirection : Swift.RawRepresentable {}
+extension DHMediaPlay.ControlType : Swift.Equatable {}
+extension DHMediaPlay.ControlType : Swift.Hashable {}
+extension DHMediaPlay.ControlType : Swift.RawRepresentable {}
+extension DHMediaPlay.PageCountViewStyle : Swift.Equatable {}
+extension DHMediaPlay.PageCountViewStyle : Swift.Hashable {}
+extension DHMediaPlay.PageCountViewStyle : Swift.RawRepresentable {}
+extension DHMediaPlay.PageCountViewLocation : Swift.Equatable {}
+extension DHMediaPlay.PageCountViewLocation : Swift.Hashable {}
+extension DHMediaPlay.PageCountViewLocation : Swift.RawRepresentable {}

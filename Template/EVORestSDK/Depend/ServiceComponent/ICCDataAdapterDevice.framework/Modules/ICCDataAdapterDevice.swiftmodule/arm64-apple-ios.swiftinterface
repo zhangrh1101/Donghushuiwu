@@ -1,0 +1,38 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ICCDataAdapterDevice
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Foundation
+import ICCDataAdapterCore
+@_exported import ICCDataAdapterDevice
+import ICCPlatformSDKSwift
+import MQTTLibrary
+import ObjectMapper
+import Swift
+import XMLDictionary
+import _Concurrency
+import _StringProcessing
+@_inheritsConvenienceInitializers @objc public class DPRestProSDKDataAdapterDeviceSwift : ObjectiveC.NSObject {
+  @objc public func queryCurrentMediaVKByDeviceId(withDeviceId deviceId: Swift.String) throws -> ICCDataAdapterDevice.BRMDeviceGetCurrentMediaVKResponseObjc
+  @objc public func queryAccessDoorStatus(WithChannelIds channelIds: Swift.String) throws -> ICCDataAdapterDevice.ExpressaccessdoorgetDoorAlwaysOpenCloseStatusResponseObjc
+  @objc public func quertAccessDoorGlobalConfig() throws -> [Swift.String]
+  @objc public func queryAccessDoorGlobalStatus() throws -> Swift.String
+  @objc public func getDeviceOrgByLayered(withChannelTypes channelTypes: [Swift.String], timeout: Foundation.TimeInterval) throws -> ICCDataAdapterDevice.EVOBRMGetDeviceOrgByLayeredResponseObjc
+  @objc public func getDeviceOrg(withOrgCode orgCode: Swift.String, channelTypes: [Swift.String], timeout: Foundation.TimeInterval) throws -> ICCDataAdapterDevice.EVOBRMGetDeviceOrgResponseObjc
+  @objc public func ptzSitePosition(withChannelId channelId: Swift.String, extend: Swift.String, pointX: Swift.String, pointY: Swift.String, pointZ: Swift.String) throws -> Swift.String
+  @objc public func operatorPtzCamera(withChannelId channelId: Swift.String, step: Swift.String, command: Swift.Int, extend: Swift.String, direct: Swift.String, operateType: Swift.String) throws -> Swift.String
+  @objc public func operatePtzDirect(withChannelId channelId: Swift.String, stepX: Swift.String, stepY: Swift.String, extend: Swift.String, direct: Swift.String, command: Swift.Int) throws -> Swift.String
+  @objc public func operatePtzPresetPoint(wtihChannelId channelId: Swift.String, prepointcode: Swift.Int, presetPointName: Swift.String, operatorType: Swift.String) throws -> Swift.String
+  @objc public func queryPtzPrePoint(withChannelId channelId: Swift.String?) throws -> ICCDataAdapterDevice.DMSPtzGetPresetPointsResponseObjc
+  @objc public func getChannelsCount() throws -> ICCDataAdapterDevice.EVOBRMGetChannelsCountResponseObjc
+  @objc public func getDevices(withDeviceCodes deviceCodes: [Swift.String]) throws -> ICCDataAdapterDevice.EVOBRMGetDevicesResponseObjc
+  @objc public func getMediaVKS(startDate: Swift.String, endDate: Swift.String, deviceCode: Swift.String) -> [ICCDataAdapterProtocol.DSSPlateMediaVKInfo]
+  @objc public func getUserView() throws -> ICCDataAdapterProtocol.DSSUserViewDeptInfo
+  @objc public func queryTemperature(_ channelId: Swift.String, point: CoreFoundation.CGPoint) throws -> Foundation.NSNumber
+  @objc public func controlSoundLight(_ channelIds: [Swift.String], isOn: Swift.Bool, callback: @escaping ICCDataAdapterProtocol.callBackWithError)
+  @objc public func controlAlarmOut(_ channelId: Swift.String, isOn: Swift.Bool, callback: @escaping ICCDataAdapterProtocol.callBackWithError)
+  @objc public func getSoftTriggerList(_ channelId: Swift.String, callback: @escaping ICCDataAdapterProtocol.callBackWithError)
+  @objc public func generateSoftTrigger(_ channelId: Swift.String, alarmTypeId: Swift.String, callback: @escaping ICCDataAdapterProtocol.callBackWithError)
+  @objc override dynamic public init()
+  @objc deinit
+}

@@ -1,0 +1,6 @@
+framework module MTLogger {
+  umbrella header "MTLogger-umbrella.h"
+
+  export *
+  module * { export * }
+}

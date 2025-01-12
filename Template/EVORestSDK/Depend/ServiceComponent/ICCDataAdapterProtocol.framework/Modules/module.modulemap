@@ -1,0 +1,6 @@
+framework module ICCDataAdapterProtocol {
+  umbrella header "ICCDataAdapterProtocol-umbrella.h"
+
+  export *
+  module * { export * }
+}

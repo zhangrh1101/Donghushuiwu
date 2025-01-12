@@ -1,0 +1,11 @@
+framework module ICCDataAdapterDevice {
+  umbrella header "ICCDataAdapterDevice-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module ICCDataAdapterDevice.Swift {
+  header "ICCDataAdapterDevice-Swift.h"
+  requires objc
+}

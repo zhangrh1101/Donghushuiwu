@@ -1,0 +1,832 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ICCDataAdapterRecord",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ICCPlatformSDKSwift",
+        "printedName": "ICCPlatformSDKSwift",
+        "declKind": "Import",
+        "moduleName": "ICCDataAdapterRecord"
+      },
+      {
+        "kind": "Import",
+        "name": "Alamofire",
+        "printedName": "Alamofire",
+        "declKind": "Import",
+        "moduleName": "ICCDataAdapterRecord"
+      },
+      {
+        "kind": "Import",
+        "name": "MQTTLibrary",
+        "printedName": "MQTTLibrary",
+        "declKind": "Import",
+        "moduleName": "ICCDataAdapterRecord"
+      },
+      {
+        "kind": "Import",
+        "name": "ICCDataAdapterCore",
+        "printedName": "ICCDataAdapterCore",
+        "declKind": "Import",
+        "moduleName": "ICCDataAdapterRecord"
+      },
+      {
+        "kind": "Import",
+        "name": "ICCDataAdapterProtocol",
+        "printedName": "ICCDataAdapterProtocol",
+        "declKind": "Import",
+        "moduleName": "ICCDataAdapterRecord"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OSRSAdapterRecord",
+        "printedName": "OSRSAdapterRecord",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "queryRecord",
+            "printedName": "queryRecord(_:begin:end:source:record:isSecurity:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[ICCDataAdapterProtocol.DSSRecordInfo]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DSSRecordInfo",
+                    "printedName": "ICCDataAdapterProtocol.DSSRecordInfo",
+                    "usr": "c:objc(cs)DSSRecordInfo"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RecordSource",
+                "printedName": "ICCDataAdapterProtocol.RecordSource",
+                "usr": "c:@E@RecordSource"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MBL_RECORD_TYPE",
+                "printedName": "ICCDataAdapterProtocol.MBL_RECORD_TYPE",
+                "usr": "c:@E@MBL_RECORD_TYPE"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ICCDataAdapterRecord@objc(cs)OSRSAdapterRecord(im)queryRecord:begin:end:source:record:isSecurity:error:",
+            "mangledName": "$s20ICCDataAdapterRecord011OSRSAdapterC0C05queryC0_5begin3end6source6record10isSecuritySaySo13DSSRecordInfoCGSS_10Foundation4DateVAOSo0C6SourceVSo15MBL_RECORD_TYPEVSbtKF",
+            "moduleName": "ICCDataAdapterRecord",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "queryRecordBitmask",
+            "printedName": "queryRecordBitmask(_:month:source:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Foundation.NSNumber]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Date",
+                "printedName": "Foundation.Date",
+                "usr": "s:10Foundation4DateV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RecordSource",
+                "printedName": "ICCDataAdapterProtocol.RecordSource",
+                "usr": "c:@E@RecordSource"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ICCDataAdapterRecord@objc(cs)OSRSAdapterRecord(im)queryRecordBitmask:month:source:error:",
+            "mangledName": "$s20ICCDataAdapterRecord011OSRSAdapterC0C05queryC7Bitmask_5month6sourceSaySo8NSNumberCGSS_10Foundation4DateVSo0C6SourceVtKF",
+            "moduleName": "ICCDataAdapterRecord",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "queryAlarmRecord",
+            "printedName": "queryAlarmRecord(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[ICCDataAdapterProtocol.DSSRecordInfo]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DSSRecordInfo",
+                    "printedName": "ICCDataAdapterProtocol.DSSRecordInfo",
+                    "usr": "c:objc(cs)DSSRecordInfo"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@ICCDataAdapterRecord@objc(cs)OSRSAdapterRecord(im)queryAlarmRecord:error:",
+            "mangledName": "$s20ICCDataAdapterRecord011OSRSAdapterC0C010queryAlarmC0ySaySo13DSSRecordInfoCGSSKF",
+            "moduleName": "ICCDataAdapterRecord",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OSRSAdapterRecord",
+                "printedName": "ICCDataAdapterRecord.OSRSAdapterRecord",
+                "usr": "c:@M@ICCDataAdapterRecord@objc(cs)OSRSAdapterRecord"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@ICCDataAdapterRecord@objc(cs)OSRSAdapterRecord(im)init",
+            "mangledName": "$s20ICCDataAdapterRecord011OSRSAdapterC0CACycfc",
+            "moduleName": "ICCDataAdapterRecord",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@ICCDataAdapterRecord@objc(cs)OSRSAdapterRecord",
+        "mangledName": "$s20ICCDataAdapterRecord011OSRSAdapterC0C",
+        "moduleName": "ICCDataAdapterRecord",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 656,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 666,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 811,
+      "length": 52,
+      "value": "\"\/evo-apigw\/admin\/API\/SS\/Record\/QueryRecords?token=\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 921,
+      "length": 52,
+      "value": "\"\/evo-apigw\/admin\/API\/SS\/Record\/QueryRecords?token=\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 1039,
+      "length": 94,
+      "value": "\"\/evo-apigw\/evo-security\/\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 1091,
+      "length": 14,
+      "value": "\"evo-security\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 1107,
+      "length": 1,
+      "value": "\"\/sheet\/video\/queryRecords\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 1178,
+      "length": 94,
+      "value": "\"\/evo-apigw\/evo-security\/\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 1230,
+      "length": 14,
+      "value": "\"evo-security\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 1246,
+      "length": 1,
+      "value": "\"\/sheet\/video\/queryRecords\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1710,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1780,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1847,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1916,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2115,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 2284,
+      "length": 3,
+      "value": "\"0\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 2976,
+      "length": 3,
+      "value": "\"2\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 3100,
+      "length": 3,
+      "value": "\"3\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3988,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4167,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4239,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4655,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4712,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4745,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4766,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4840,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4902,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5033,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 5192,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5224,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 5306,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5316,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 5617,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5627,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 5773,
+      "length": 60,
+      "value": "\"\/evo-apigw\/admin\/API\/SS\/Record\/GetChannelMonthRecordStatus\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 5874,
+      "length": 60,
+      "value": "\"\/evo-apigw\/admin\/API\/SS\/Record\/GetChannelMonthRecordStatus\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 6057,
+      "length": 8,
+      "value": "\"yyyyMM\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6190,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6260,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6327,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6396,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6464,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 6538,
+      "length": 15,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 6552,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 6802,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 6877,
+      "length": 3,
+      "value": "\",\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 6949,
+      "length": 3,
+      "value": "\"1\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7030,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7138,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 7331,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7397,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 7483,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7493,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 7804,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7814,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 7948,
+      "length": 63,
+      "value": "\"\/evo-apigw\/admin\/API\/SS\/Record\/GetAlarmRecords?token=\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 8010,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 8101,
+      "length": 63,
+      "value": "\"\/evo-apigw\/admin\/API\/SS\/Record\/GetAlarmRecords?token=\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 8163,
+      "length": 1,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 8663,
+      "length": 3,
+      "value": "\"2\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 8787,
+      "length": 3,
+      "value": "\"3\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9675,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9854,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9926,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10342,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10399,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10432,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10453,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10527,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10589,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10720,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 10879,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10911,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "StringLiteral",
+      "offset": 10993,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/a32943\/Documents\/Git\/ios_sdk\/icc\/Depend\/ICCDataAdapter\/DataAdapterRecord\/Service\/OSRSAdapterRecord.swift",
+      "kind": "IntegerLiteral",
+      "offset": 11003,
+      "length": 1,
+      "value": "0"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+framework module ICCPlatformSDKSwift {
+  umbrella header "ICCPlatformSDKSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module ICCPlatformSDKSwift.Swift {
+  header "ICCPlatformSDKSwift-Swift.h"
+  requires objc
+}

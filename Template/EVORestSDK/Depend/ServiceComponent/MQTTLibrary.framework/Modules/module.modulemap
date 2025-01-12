@@ -1,0 +1,11 @@
+framework module MQTTLibrary {
+  umbrella header "MQTTLibrary-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module MQTTLibrary.Swift {
+  header "MQTTLibrary-Swift.h"
+  requires objc
+}
