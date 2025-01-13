@@ -10,6 +10,7 @@
 #import <WebKit/WebKit.h>
 #import <AMapLocationKit/AMapLocationKit.h>
 #import "HHSocketManager.h"
+#import "DHMainViewController.h"
 
 //js调用原生
 #define WebAction_ClearCache       @"clearCache"
@@ -153,7 +154,8 @@
     //    self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.title = self.htmlTitle;
+//    self.title = self.htmlTitle;
+    self.fd_prefersNavigationBarHidden = YES;
     [self setNavigationBar];
     
     [self setLocationManager];
@@ -494,7 +496,8 @@
         
         NSLog(@"WebAction_PushDaHua %@", message.body);
         
-        
+        DHMainViewController *mainVC = [[DHMainViewController alloc] init];
+        [self.navigationController pushViewController:mainVC animated:YES];
     }
 }
 
@@ -544,7 +547,7 @@
         NSLog(@"loading");
     } else if ([keyPath isEqualToString:@"title"]) {
         
-        self.title = self.htmlTitle.length ? self.htmlTitle : self.webView.title;
+//        self.title = self.htmlTitle.length ? self.htmlTitle : self.webView.title;
         NSLog(@" self.webView.title %@",  self.webView.title);
     } else if ([keyPath isEqualToString:@"estimatedProgress"]) {
         //进度值
