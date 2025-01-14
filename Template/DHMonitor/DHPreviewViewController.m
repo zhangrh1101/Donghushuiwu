@@ -28,6 +28,7 @@
 //码流选择页
 @property (nonatomic, strong) DHStreamSelectView        * streamSelectView;
 
+@property (nonatomic, strong) dispatch_queue_t ptzQueue;
 
 @end
 
@@ -62,6 +63,7 @@
     [self updateBtnStatus:0];
 }
 
+
 - (void)initPlayView {
     
     _playWindow = [[DHMediaPlayView alloc] init];
@@ -72,6 +74,31 @@
         make.height.mas_equalTo(SCREEN_WIDTH/4*3);
     }];
     
+    _playWndToolView = [[DSSPlayWndToolBar alloc] init];
+    [self.view addSubview:_playWndToolView];
+    [_playWndToolView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_playWindow.mas_bottom);
+        make.left.right.mas_equalTo(0);
+        make.height.mas_equalTo(50);
+    }];
+    
+    
+    self.ptzQueue = dispatch_queue_create("PTZ_QUEUE", DISPATCH_QUEUE_SERIAL);
+    self.ptzToolBarView.delegate = self;
+    self.mainBarView.delegate = self;
+    self.playWndToolView.delegate = self;
+    self.ptzControlView.delegate = self;
+    self.streamSelectView.delegate = self;
+    self.ptzToolBarView.hidden = YES;
+    self.ptzControlView.hidden = YES;
+//    self.streamSelectBGView.hidden = YES;
+//    self.lsPresetTableView.delegate = self;
+//    self.lsPresetTableView.dataSource = self;
+//    self.lsPresetBGView.hidden = YES;
+    
+//    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hiddenPresetView)];
+//    tapGesture.delegate = self;
+//    [self.lsPresetBGView addGestureRecognizer:tapGesture];
     
     //初始化播放窗口
     DSSUserInfo* userinfo = [DHLoginManager sharedInstance].userInfo;
@@ -191,6 +218,67 @@
             break;
         default:
             break;
+    }
+}
+
+
+#pragma mark - DSSRealUIServiceProtocol - play window tool
+//播放、停止
+-(void)DSSPlayWndToolbarViewDidClickPlay:(BOOL)isOn{
+    NSInteger selectIndex = [self.playWindow selectedWinIndex];
+    
+    if (self.selectChannelId == nil || [self.selectChannelId isEqualToString:@""]) {
+        NSLog(@"Before playing,add the channel first");
+        return;
+    }
+    [self.playWndToolView.playBtn setEnabled:YES];
+    if ([self isPlaying]) {
+        [self.playWindow stop:selectIndex];
+    } else {
+        [self.playWindow play:selectIndex];
+    }
+}
+//打开/关闭声音
+-(void)DSSPlayWndToolbarViewDidClickVoice:(BOOL)isOn{
+    NSInteger selectIndex = [self.playWindow selectedWinIndex];
+    if ([self isPlaying]) {
+        if ([self isAudioOpen]) {
+            [self.playWindow closeAudio:selectIndex];
+        } else {
+            if ([self isTalking]) {
+//                [self stopTalk];
+            }else{
+                [self.playWindow stopTalk:selectIndex];
+            }
+            [self.playWindow openAudio:selectIndex];
+        }
+    } else {
+        [self.playWndToolView.voiceBtn setSelected:NO];
+    }
+}
+
+//选择码流
+-(void)DSSPlayWndToolbarViewDidClickStream:(BOOL)isOn{
+    NSInteger winIndex = [self.playWindow selectedWinIndex];
+    Camera* camera = [self.playWindow getCamera:winIndex];
+    if ([camera isKindOfClass:[DSSRTCamera class]]) {
+        int streamType = [self getSelectStreamType];
+        NSString *channelIdStr = self.selectChannelId;
+//        self.streamSelectBGView.hidden = NO;
+        [self.streamSelectView resetHDBtnSelectedStatue:streamType];
+        if ([self isThirdStreamSupported:channelIdStr]) {
+            [self.streamSelectView.LCButton setEnabled:YES];
+            [self.streamSelectView.SDButton setEnabled:YES];
+            [self.streamSelectView.HDButton setEnabled:YES];
+        } else {
+            [self.streamSelectView.LCButton setEnabled:NO];
+            [self.streamSelectView.HDButton setEnabled:YES];
+            if ([self isSubStreamSupported:channelIdStr]) {
+                [self.streamSelectView.SDButton setEnabled:YES];
+            } else {
+                [self.streamSelectView.SDButton setEnabled:NO];
+            }
+        }
     }
 }
 

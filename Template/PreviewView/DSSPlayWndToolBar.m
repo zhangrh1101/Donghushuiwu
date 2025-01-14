@@ -15,16 +15,41 @@
 
 @implementation DSSPlayWndToolBar
 
+//- (instancetype)init {
+//    if(self = [super init]){
+//        self = [[[NSBundle mainBundle] loadNibNamed:@"DSSPlayWndToolBar" owner:self options:nil] firstObject];
+//    }
+//    return self;
+//}
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder{
-    self = [super initWithCoder:aDecoder];
-    if (self) {
+- (instancetype)init {
+    if(self = [super init]){
         _view = [[[NSBundle mainBundle] loadNibNamed:@"DSSPlayWndToolBar" owner:self options:nil] firstObject];
         self.view.frame = self.bounds;
         [self addSubview:self.view];
     }
     return self;
 }
+
+//- (instancetype)initWithFrame:(CGRect)frame{
+//    self = [super initWithFrame:frame];
+//    if (self) {
+//        _view = [[[NSBundle mainBundle] loadNibNamed:@"DSSPlayWndToolBar" owner:self options:nil] firstObject];
+//        self.view.frame = self.bounds;
+//        [self addSubview:self.view];
+//    }
+//    return self;
+//}
+
+//- (instancetype)initWithCoder:(NSCoder *)aDecoder{
+//    self = [super initWithCoder:aDecoder];
+//    if (self) {
+//        _view = [[[NSBundle mainBundle] loadNibNamed:@"DSSPlayWndToolBar" owner:self options:nil] firstObject];
+//        self.view.frame = self.bounds;
+//        [self addSubview:self.view];
+//    }
+//    return self;
+//}
 
 - (void)awakeFromNib{
     [super awakeFromNib];

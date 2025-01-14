@@ -19,7 +19,6 @@
 
 static NSString *const WebURL = @"http://192.168.2.14:8502/h5/";
 //static NSString *const WebURL = @"https://server1.wh-nf.cn:8201/h5/#/login";
-//static NSString *const WebURL = @"https://server1.wh-nf.cn:8201/h5/#/login";
 
 @interface AppDelegate () <AMapLocationManagerDelegate>
 
@@ -46,12 +45,17 @@ static NSString *const WebURL = @"http://192.168.2.14:8502/h5/";
     self.window.backgroundColor = [UIColor clearColor];
     //    self.window.backgroundColor = [UIColor whiteColor];
     
-    HHWebViewController *webVC = [[HHWebViewController alloc] init];
-    webVC.htmlUrl = WebURL;
-    BaseNavigationController *navVC = [[BaseNavigationController alloc] initWithRootViewController:webVC];
+//    HHWebViewController *webVC = [[HHWebViewController alloc] init];
+//    webVC.htmlUrl = WebURL;
+//    BaseNavigationController *navVC = [[BaseNavigationController alloc] initWithRootViewController:webVC];
+//    self.window.rootViewController = navVC;
+//    [self.window makeKeyAndVisible];
+    
+    
+    DHMainViewController *mainVC = [[DHMainViewController alloc] init];
+    BaseNavigationController *navVC = [[BaseNavigationController alloc] initWithRootViewController:mainVC];
     self.window.rootViewController = navVC;
     [self.window makeKeyAndVisible];
-    
 }
 
 #pragma mark - 获取设备UUID
