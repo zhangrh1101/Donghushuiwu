@@ -12,6 +12,9 @@
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import <AMapSearchKit/AMapSearchKit.h>
 #import "HHSocketManager.h"
+#import "DHManagerHeader.h"
+#import "DHMainViewController.h"
+#import "DHPreviewViewController.h"
 
 //js调用原生
 #define WebAction_ClearCache       @"clearCache"
@@ -71,6 +74,7 @@
 @property (strong, nonatomic) AMapLocationManager                   * locationManager;
 @property (strong, nonatomic) AMapSearchAPI                         * amapSearch;
 @property (strong, nonatomic) CLLocation                            * currentLocation;
+
 
 
 @end
@@ -158,11 +162,16 @@
     //    self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.title = self.htmlTitle;
+//    self.title = self.htmlTitle;
+    self.fd_prefersNavigationBarHidden = YES;
     [self setNavigationBar];
     
     [self setLocationManager];
     [self initWebsocket];
+    
+    [DHDataCenter sharedInstance];
+    [DHLoginManager sharedInstance];
+    [DHDeviceManager sharedInstance];
     
     // 添加webView
     
@@ -481,7 +490,7 @@
     if ([message.name isEqualToString:WebAction_GetLocation]) {
         NSLog(@"WebAction_GetLocation - body为： %@", message);
         if (message.body) {
-            NSDictionary *messageDict = [message.body jsonValueDecoded];
+            NSDictionary *messageDict = [message.body modelToJSONObject];
             NSLog(@"%@",messageDict);
             
         }
@@ -497,9 +506,29 @@
         
     }else if ([message.name isEqualToString:WebAction_PushDaHua]) {
         
-        NSLog(@"WebAction_PushDaHua %@", message.body);
+        NSDictionary *messageDict = [message.body modelToJSONObject];
+        if (messageDict) {
+            NSLog(@"%@",messageDict);
+            
+            [[DHDataCenter sharedInstance] setHost:messageDict[@"ip"] port:[messageDict[@"port"] intValue]];
+            NSError *error = nil;
+            DSSUserInfo *userInfo = [[DHLoginManager sharedInstance] loginWithUserName:messageDict[@"userName"] Password:messageDict[@"password"] error:&error];
+            [[DHDeviceManager sharedInstance] afterLoginInExcute:userInfo];
+            //加载设备树
+//            [[DHDeviceManager sharedInstance] loadDeviceTree:&error];
+            
+            if (error) {
+                return;
+            }else{
+                DHPreviewViewController *previewVC = [[DHPreviewViewController alloc] init];
+                previewVC.selectChannelId = messageDict[@"indexCode"];
+                [self.navigationController pushViewController:previewVC animated:YES];
+            }
+            
+        }
         
-        
+//        DHMainViewController *mainVC = [[DHMainViewController alloc] init];
+//        [self.navigationController pushViewController:mainVC animated:YES];
     }
 }
 
@@ -549,7 +578,7 @@
         NSLog(@"loading");
     } else if ([keyPath isEqualToString:@"title"]) {
         
-        self.title = self.htmlTitle.length ? self.htmlTitle : self.webView.title;
+//        self.title = self.htmlTitle.length ? self.htmlTitle : self.webView.title;
         NSLog(@" self.webView.title %@",  self.webView.title);
     } else if ([keyPath isEqualToString:@"estimatedProgress"]) {
         //进度值

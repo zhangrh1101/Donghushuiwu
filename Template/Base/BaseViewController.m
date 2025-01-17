@@ -58,7 +58,7 @@
     };
 
     if (self.navigationController.viewControllers.count > 1) {
-        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_back"] style:UIBarButtonItemStylePlain target:self action:@selector(navBackClick)];
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_back_black"] style:UIBarButtonItemStylePlain target:self action:@selector(navBackClick)];
     }
     
     if (@available(iOS 11.0, *)) {
@@ -71,8 +71,7 @@
         [UITableView appearance].sectionHeaderTopPadding = 0;
     }
     
-    AdjustsScrollViewInsets_NO([UITableView appearance], self);
-    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     
     //设置图片背景
 //    UIImage *backgroundImage = [UIImage imageNamed:@"background_main"];

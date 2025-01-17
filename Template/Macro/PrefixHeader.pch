@@ -93,6 +93,8 @@
 
 
 #import "BaseTabBarController.h"
+#import "BaseViewController.h"
+
 //#import "HomeViewController.h"
 //#import "LoginViewController.h"
 

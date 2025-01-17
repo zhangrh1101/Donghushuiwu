@@ -16,10 +16,9 @@
 
 
 //地址入口
-static NSString *const WebURL =  @"https://server1.wh-nf.cn:8201/h5/#/login";
-//@"http://192.168.16.45:8502/h5/#/login";
-// @"https://server1.wh-nf.cn:8201/h5/#/login";
-//static NSString *const WebURL = @"https://server1.wh-nf.cn:8201/h5/#/login";
+
+//static NSString *const WebURL = @"http://192.168.2.14:8502/h5/";
+static NSString *const WebURL = @"https://server1.wh-nf.cn:8201/h5/#/login";
 
 @interface AppDelegate () <AMapLocationManagerDelegate>
 
@@ -48,14 +47,14 @@ static NSString *const WebURL =  @"https://server1.wh-nf.cn:8201/h5/#/login";
     
     HHWebViewController *webVC = [[HHWebViewController alloc] init];
     webVC.htmlUrl = WebURL;
-    self.window.rootViewController = webVC;
+    BaseNavigationController *navVC = [[BaseNavigationController alloc] initWithRootViewController:webVC];
+    self.window.rootViewController = navVC;
     [self.window makeKeyAndVisible];
     
-    
-//    DHMainViewController *webVC = [[DHMainViewController alloc] init];
-//    self.window.rootViewController = webVC;
+//    DHMainViewController *mainVC = [[DHMainViewController alloc] init];
+//    BaseNavigationController *navVC = [[BaseNavigationController alloc] initWithRootViewController:mainVC];
+//    self.window.rootViewController = navVC;
 //    [self.window makeKeyAndVisible];
-    
 }
 
 #pragma mark - 获取设备UUID
@@ -89,7 +88,7 @@ static NSString *const WebURL =  @"https://server1.wh-nf.cn:8201/h5/#/login";
     manager.shouldResignOnTouchOutside=YES;
     manager.shouldToolbarUsesTextFieldTintColor=YES;
     manager.keyboardDistanceFromTextField = KScale(60);
-    manager.toolbarManageBehaviour = IQAutoToolbarByTag;
+    manager.toolbarManageBehavior = IQAutoToolbarByTag;
 }
 
 #pragma mark - 高德配置

@@ -92,6 +92,18 @@
 		3ADE97F82D33D28800C67C15 /* DHPlaybackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE97EF2D33D28800C67C15 /* DHPlaybackManager.m */; };
 		3ADE97F92D33D28800C67C15 /* DHHudPrecess.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE97F12D33D28800C67C15 /* DHHudPrecess.m */; };
 		3ADE97FD2D33D2AD00C67C15 /* DHMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE97FB2D33D2AC00C67C15 /* DHMainViewController.m */; };
+		3ADE98012D34ABBD00C67C15 /* DHHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE98002D34ABBD00C67C15 /* DHHomeViewController.m */; };
+		3ADE98052D34FDFE00C67C15 /* DHPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE98042D34FDFE00C67C15 /* DHPreviewViewController.m */; };
+		3ADE98162D35024E00C67C15 /* DSSPtzToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ADE98072D35024E00C67C15 /* DSSPtzToolBar.xib */; };
+		3ADE98172D35024E00C67C15 /* DSSPtzToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE98082D35024E00C67C15 /* DSSPtzToolBar.m */; };
+		3ADE98182D35024E00C67C15 /* DSSRealPtzControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE98092D35024E00C67C15 /* DSSRealPtzControlView.m */; };
+		3ADE98192D35024E00C67C15 /* DHStreamSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE980A2D35024E00C67C15 /* DHStreamSelectView.m */; };
+		3ADE981A2D35024E00C67C15 /* DSSPlayWndToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE980C2D35024E00C67C15 /* DSSPlayWndToolBar.m */; };
+		3ADE981B2D35024E00C67C15 /* DSSMainToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ADE980D2D35024E00C67C15 /* DSSMainToolBar.xib */; };
+		3ADE981C2D35024E00C67C15 /* DSSPlayWndToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ADE980F2D35024E00C67C15 /* DSSPlayWndToolBar.xib */; };
+		3ADE981D2D35024E00C67C15 /* DSSMainToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ADE98112D35024E00C67C15 /* DSSMainToolBar.m */; };
+		3ADE981E2D35024E00C67C15 /* DHStreamSelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ADE98132D35024E00C67C15 /* DHStreamSelectView.xib */; };
+		3ADE981F2D35024E00C67C15 /* DSSRealPtzControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3ADE98152D35024E00C67C15 /* DSSRealPtzControlView.xib */; };
 		4B58248A2D33BE7100B4A675 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B58247D2D33BE7100B4A675 /* libstdc++.6.0.9.tbd */; };
 		4B58248E2D33BE7100B4A675 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5824822D33BE7100B4A675 /* MBProgressHUD.framework */; };
 		4B58249A2D33BE7100B4A675 /* SocketRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B5824862D33BE7100B4A675 /* SocketRocket.framework */; };
@@ -357,6 +369,28 @@
 		3ADE97F32D33D28800C67C15 /* DHDeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHDeviceManager.h; sourceTree = "<group>"; };
 		3ADE97FB2D33D2AC00C67C15 /* DHMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHMainViewController.m; sourceTree = "<group>"; };
 		3ADE97FC2D33D2AD00C67C15 /* DHMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHMainViewController.h; sourceTree = "<group>"; };
+		3ADE97FF2D34ABBD00C67C15 /* DHHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHHomeViewController.h; sourceTree = "<group>"; };
+		3ADE98002D34ABBD00C67C15 /* DHHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHHomeViewController.m; sourceTree = "<group>"; };
+		3ADE98022D34F44600C67C15 /* DHManagerHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHManagerHeader.h; sourceTree = "<group>"; };
+		3ADE98032D34FDFE00C67C15 /* DHPreviewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHPreviewViewController.h; sourceTree = "<group>"; };
+		3ADE98042D34FDFE00C67C15 /* DHPreviewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DHPreviewViewController.m; sourceTree = "<group>"; };
+		3ADE98072D35024E00C67C15 /* DSSPtzToolBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSSPtzToolBar.xib; sourceTree = "<group>"; };
+		3ADE98082D35024E00C67C15 /* DSSPtzToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSPtzToolBar.m; sourceTree = "<group>"; };
+		3ADE98092D35024E00C67C15 /* DSSRealPtzControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSRealPtzControlView.m; sourceTree = "<group>"; };
+		3ADE980A2D35024E00C67C15 /* DHStreamSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHStreamSelectView.m; sourceTree = "<group>"; };
+		3ADE980B2D35024E00C67C15 /* DSSMainToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSMainToolBar.h; sourceTree = "<group>"; };
+		3ADE980C2D35024E00C67C15 /* DSSPlayWndToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSPlayWndToolBar.m; sourceTree = "<group>"; };
+		3ADE980D2D35024E00C67C15 /* DSSMainToolBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSSMainToolBar.xib; sourceTree = "<group>"; };
+		3ADE980E2D35024E00C67C15 /* DSSPtzToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSPtzToolBar.h; sourceTree = "<group>"; };
+		3ADE980F2D35024E00C67C15 /* DSSPlayWndToolBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSSPlayWndToolBar.xib; sourceTree = "<group>"; };
+		3ADE98102D35024E00C67C15 /* DHStreamSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHStreamSelectView.h; sourceTree = "<group>"; };
+		3ADE98112D35024E00C67C15 /* DSSMainToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSSMainToolBar.m; sourceTree = "<group>"; };
+		3ADE98122D35024E00C67C15 /* DSSRealPtzControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSRealPtzControlView.h; sourceTree = "<group>"; };
+		3ADE98132D35024E00C67C15 /* DHStreamSelectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DHStreamSelectView.xib; sourceTree = "<group>"; };
+		3ADE98142D35024E00C67C15 /* DSSPlayWndToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSPlayWndToolBar.h; sourceTree = "<group>"; };
+		3ADE98152D35024E00C67C15 /* DSSRealPtzControlView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSSRealPtzControlView.xib; sourceTree = "<group>"; };
+		3ADE98202D35028C00C67C15 /* DHPreviewHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHPreviewHeader.h; sourceTree = "<group>"; };
+		3ADE98212D38F5BD00C67C15 /* Template.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Template.entitlements; sourceTree = "<group>"; };
 		4B58246B2D33BE7100B4A675 /* DHMediaPlay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DHMediaPlay.framework; sourceTree = "<group>"; };
 		4B58246C2D33BE7100B4A675 /* DHMediaPlayFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DHMediaPlayFramework.framework; sourceTree = "<group>"; };
 		4B58246D2D33BE7100B4A675 /* DHMediaPlayResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DHMediaPlayResource.bundle; sourceTree = "<group>"; };
@@ -471,6 +505,9 @@
 		3A2AF1C02D2CB4ED00158E09 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				3ADE98212D38F5BD00C67C15 /* Template.entitlements */,
+				3ADE97FE2D34AB9000C67C15 /* DHMonitor */,
+				3ADE98062D35024E00C67C15 /* PreviewView */,
 				3ADE97E82D33D28800C67C15 /* Manager */,
 				4B5824892D33BE7100B4A675 /* EVORestSDK */,
 				3A2AF2BF2D2CCCC100158E09 /* Web */,
@@ -706,8 +743,6 @@
 				3A2AF1C22D2CB4ED00158E09 /* AppDelegate.m */,
 				3A2AF1C72D2CB4ED00158E09 /* ViewController.h */,
 				3A2AF1C82D2CB4ED00158E09 /* ViewController.m */,
-				3ADE97FC2D33D2AD00C67C15 /* DHMainViewController.h */,
-				3ADE97FB2D33D2AC00C67C15 /* DHMainViewController.m */,
 				3A2AF1CA2D2CB4ED00158E09 /* Main.storyboard */,
 				3A2AF1CD2D2CB4EF00158E09 /* Assets.xcassets */,
 				3A2AF1CF2D2CB4EF00158E09 /* LaunchScreen.storyboard */,
@@ -767,8 +802,45 @@
 				3ADE97EA2D33D28800C67C15 /* DHLoginManager.m */,
 				3ADE97EC2D33D28800C67C15 /* DHPlaybackManager.h */,
 				3ADE97EF2D33D28800C67C15 /* DHPlaybackManager.m */,
+				3ADE98022D34F44600C67C15 /* DHManagerHeader.h */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		3ADE97FE2D34AB9000C67C15 /* DHMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				3ADE97FC2D33D2AD00C67C15 /* DHMainViewController.h */,
+				3ADE97FB2D33D2AC00C67C15 /* DHMainViewController.m */,
+				3ADE97FF2D34ABBD00C67C15 /* DHHomeViewController.h */,
+				3ADE98002D34ABBD00C67C15 /* DHHomeViewController.m */,
+				3ADE98032D34FDFE00C67C15 /* DHPreviewViewController.h */,
+				3ADE98042D34FDFE00C67C15 /* DHPreviewViewController.m */,
+			);
+			path = DHMonitor;
+			sourceTree = "<group>";
+		};
+		3ADE98062D35024E00C67C15 /* PreviewView */ = {
+			isa = PBXGroup;
+			children = (
+				3ADE98142D35024E00C67C15 /* DSSPlayWndToolBar.h */,
+				3ADE980C2D35024E00C67C15 /* DSSPlayWndToolBar.m */,
+				3ADE980F2D35024E00C67C15 /* DSSPlayWndToolBar.xib */,
+				3ADE98102D35024E00C67C15 /* DHStreamSelectView.h */,
+				3ADE980A2D35024E00C67C15 /* DHStreamSelectView.m */,
+				3ADE98132D35024E00C67C15 /* DHStreamSelectView.xib */,
+				3ADE980B2D35024E00C67C15 /* DSSMainToolBar.h */,
+				3ADE98112D35024E00C67C15 /* DSSMainToolBar.m */,
+				3ADE980D2D35024E00C67C15 /* DSSMainToolBar.xib */,
+				3ADE980E2D35024E00C67C15 /* DSSPtzToolBar.h */,
+				3ADE98082D35024E00C67C15 /* DSSPtzToolBar.m */,
+				3ADE98072D35024E00C67C15 /* DSSPtzToolBar.xib */,
+				3ADE98122D35024E00C67C15 /* DSSRealPtzControlView.h */,
+				3ADE98092D35024E00C67C15 /* DSSRealPtzControlView.m */,
+				3ADE98152D35024E00C67C15 /* DSSRealPtzControlView.xib */,
+				3ADE98202D35028C00C67C15 /* DHPreviewHeader.h */,
+			);
+			path = PreviewView;
 			sourceTree = "<group>";
 		};
 		4B5824722D33BE7100B4A675 /* PlayComponent */ = {
@@ -923,8 +995,13 @@
 			files = (
 				4B5824A22D33BE7100B4A675 /* DHMediaPlayResource.bundle in Resources */,
 				3A2AF1D12D2CB4EF00158E09 /* LaunchScreen.storyboard in Resources */,
+				3ADE981E2D35024E00C67C15 /* DHStreamSelectView.xib in Resources */,
 				3A2AF1CE2D2CB4EF00158E09 /* Assets.xcassets in Resources */,
+				3ADE981B2D35024E00C67C15 /* DSSMainToolBar.xib in Resources */,
+				3ADE98162D35024E00C67C15 /* DSSPtzToolBar.xib in Resources */,
 				3A2AF1CC2D2CB4ED00158E09 /* Main.storyboard in Resources */,
+				3ADE981C2D35024E00C67C15 /* DSSPlayWndToolBar.xib in Resources */,
+				3ADE981F2D35024E00C67C15 /* DSSRealPtzControlView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -999,6 +1076,7 @@
 				3A2AF28F2D2CB57F00158E09 /* UIAlertController+Extension.m in Sources */,
 				3A2AF2BE2D2CC4F600158E09 /* UserModel.m in Sources */,
 				3A2AF2822D2CB57F00158E09 /* NSDate+HHExtension.m in Sources */,
+				3ADE981A2D35024E00C67C15 /* DSSPlayWndToolBar.m in Sources */,
 				3A2AF2BA2D2CC46F00158E09 /* BaseTabBarController.m in Sources */,
 				3A2AF27D2D2CB57F00158E09 /* UILabel+HHExtension.m in Sources */,
 				3A2AF27F2D2CB57F00158E09 /* UITextView+Placeholder.m in Sources */,
@@ -1017,6 +1095,7 @@
 				3A2AF2982D2CB57F00158E09 /* HHAlterListPopView.m in Sources */,
 				3A2AF2752D2CB57F00158E09 /* ApiCheckTools.m in Sources */,
 				3A2AF1C92D2CB4ED00158E09 /* ViewController.m in Sources */,
+				3ADE98172D35024E00C67C15 /* DSSPtzToolBar.m in Sources */,
 				3A2AF2832D2CB57F00158E09 /* UIImage+HHExtension.m in Sources */,
 				3ADE97F62D33D28800C67C15 /* DHLoginManager.m in Sources */,
 				3A2AF2722D2CB57F00158E09 /* StatusTools.m in Sources */,
@@ -1033,7 +1112,9 @@
 				3A2AF2AA2D2CB57F00158E09 /* HHTransitionAnimator.m in Sources */,
 				3A2AF2742D2CB57F00158E09 /* ControlTools.m in Sources */,
 				3A2AF2782D2CB57F00158E09 /* UserPrivacyPopView.m in Sources */,
+				3ADE98182D35024E00C67C15 /* DSSRealPtzControlView.m in Sources */,
 				3A2AF29A2D2CB57F00158E09 /* HHSystemAlter.m in Sources */,
+				3ADE98192D35024E00C67C15 /* DHStreamSelectView.m in Sources */,
 				3A2AF2762D2CB57F00158E09 /* DeviceTools.m in Sources */,
 				3A2AF2A12D2CB57F00158E09 /* HHTextView.m in Sources */,
 				4B5824BE2D33C82000B4A675 /* Test.swift in Sources */,
@@ -1043,6 +1124,8 @@
 				3A2AF2992D2CB57F00158E09 /* HHKeyboardView.m in Sources */,
 				3A2AF2812D2CB57F00158E09 /* UIColor+HHExtension.m in Sources */,
 				3A2AF2A82D2CB57F00158E09 /* HHNavigationBar.m in Sources */,
+				3ADE981D2D35024E00C67C15 /* DSSMainToolBar.m in Sources */,
+				3ADE98052D34FDFE00C67C15 /* DHPreviewViewController.m in Sources */,
 				3A2AF2732D2CB57F00158E09 /* HHHtmlActionTool.m in Sources */,
 				3A2AF2952D2CB57F00158E09 /* HHRefreshAutoBackFooter.m in Sources */,
 				3A2AF29F2D2CB57F00158E09 /* HHFormTextField.m in Sources */,
@@ -1055,6 +1138,7 @@
 				3A2AF28A2D2CB57F00158E09 /* UIWindow+HHSafeArea.m in Sources */,
 				3A2AF2972D2CB57F00158E09 /* HHProgressCircleView.m in Sources */,
 				3A2AF29E2D2CB57F00158E09 /* HHTextField.m in Sources */,
+				3ADE98012D34ABBD00C67C15 /* DHHomeViewController.m in Sources */,
 				3A2AF2A92D2CB57F00158E09 /* MainNavbar.m in Sources */,
 				3A2AF2842D2CB57F00158E09 /* UIScrollView+HeaderScaleImage.m in Sources */,
 				3A2AF26F2D2CB57F00158E09 /* NoProductManager.m in Sources */,
@@ -1218,9 +1302,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_ENTITLEMENTS = Template/Template.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 484C8PW5NG;
@@ -1233,7 +1316,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Template/Macro/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/Template/Main/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "东湖高新";
+				INFOPLIST_KEY_CFBundleDisplayName = Template;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1253,7 +1336,6 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.newfiber.donghugaoxin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Template/Template-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1268,9 +1350,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_ENTITLEMENTS = Template/Template.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 484C8PW5NG;
@@ -1283,7 +1364,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Template/Macro/PrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = "$(SRCROOT)/Template/Main/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "东湖高新";
+				INFOPLIST_KEY_CFBundleDisplayName = Template;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1303,7 +1384,6 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.newfiber.donghugaoxin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Template/Template-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
