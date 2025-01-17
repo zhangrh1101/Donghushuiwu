@@ -9,6 +9,8 @@
 #import "HHWebViewController.h"
 #import <WebKit/WebKit.h>
 #import <AMapLocationKit/AMapLocationKit.h>
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import <AMapSearchKit/AMapSearchKit.h>
 #import "HHSocketManager.h"
 
 //js调用原生
@@ -55,7 +57,7 @@
 @end
 
 //WKViewView
-@interface HHWebViewController () <UIScrollViewDelegate, WKScriptMessageHandler, WKNavigationDelegate, WKUIDelegate, AMapLocationManagerDelegate, HHSocketManagerDelegate>
+@interface HHWebViewController () <UIScrollViewDelegate, WKScriptMessageHandler, WKNavigationDelegate, WKUIDelegate, AMapLocationManagerDelegate,AMapSearchDelegate,HHSocketManagerDelegate>
 
 @property (nonatomic, assign) BOOL                                    canGoBack;
 @property (nonatomic, strong) WKWebView                             * webView;
@@ -67,6 +69,9 @@
 @property (nonatomic, assign) CGFloat                                 progress;
 
 @property (strong, nonatomic) AMapLocationManager                   * locationManager;
+@property (strong, nonatomic) AMapSearchAPI                         * amapSearch;
+@property (strong, nonatomic) CLLocation                            * currentLocation;
+
 
 @end
 
@@ -606,6 +611,11 @@
 #pragma mark - 初始化定位
 - (void)setLocationManager {
     
+    self.amapSearch = [[AMapSearchAPI alloc] init];
+    self.amapSearch.delegate = self;
+    
+    self.currentLocation = [[CLLocation alloc] init];
+    
     self.locationManager = [[AMapLocationManager alloc] init];
     [self.locationManager setLocatingWithReGeocode:YES];
     // 带逆地理信息的一次定位（返回坐标和地址信息）
@@ -617,6 +627,8 @@
     
     self.locationManager.delegate = self;
     [self.locationManager startUpdatingLocation];
+    
+    
   
 }
 
@@ -627,7 +639,74 @@
 
     NSLog(@"222locSuccess amapLocationManager:{%f , %f};", location.coordinate.latitude, fabs(location.coordinate.longitude));
     
+    //当前定位坐标
+    self.currentLocation = location;
+    
+    
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
+    
+
+    [data setObject: [NSNumber numberWithDouble:location.coordinate.latitude] forKey:@"lat"];
+    [data setObject: [NSNumber numberWithDouble:location.coordinate.longitude] forKey:@"lng"];
+    [data setObject:reGeocode?reGeocode.province :@"" forKey:@"province"];
+    [data setObject:reGeocode?reGeocode.city :@"" forKey:@"city"];
+    [data setObject:reGeocode?reGeocode.district :@"" forKey:@"district"];
+    [data setObject:reGeocode?reGeocode.street  :@"" forKey:@"street"];
+    [data setObject:reGeocode? reGeocode.AOIName:@"" forKey:@"aoiName"];
+    [data setObject:reGeocode?reGeocode.POIName:@"" forKey:@"poiName"];
+  
+    [params setObject:data forKey:@"data"];
+    [params setObject:@"200" forKey:@"code"];
+    [params setObject:@"success" forKey:@"msg"];
+
+    NSString * function = [NSString stringWithFormat:@"requestLocation(%@)",[params modelToJSONString]];
+    NSLog(@"方法详情：%@",function);
+       //执行js方法
+    [self.webView evaluateJavaScript:function completionHandler:^(id _Nullable result, NSError * _Nullable error) {
+           //回调 error==nil 调用成功
+           NSLog(@"回传定位 error = %@",error);
+       }];
+    
+    //根据坐标获取地址信息
+//    if(self.amapSearch){
+//        AMapReGeocodeSearchRequest *regeo = [[AMapReGeocodeSearchRequest alloc] init];
+//        regeo.location                    = [AMapGeoPoint locationWithLatitude:location.coordinate.latitude longitude:location.coordinate.longitude];;
+//        regeo.requireExtension            = YES;
+//  
+//        [self.amapSearch  AMapReGoecodeSearch:regeo];
+//    }
+//   
 }
+
+/* 逆地理编码回调. */
+- (void)onReGeocodeSearchDone:(AMapReGeocodeSearchRequest *)request response:(AMapReGeocodeSearchResponse *)response
+{
+    //解析response获取地址描述
+    if(self.currentLocation){
+        NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+        [params setObject:[NSString stringWithFormat:@"%f",self.currentLocation.coordinate.latitude] forKey:@"lat"];
+        [params setObject:[NSString stringWithFormat:@"%f",self.currentLocation.coordinate.longitude]forKey:@"lng"];
+            
+        if (response.regeocode != nil)  {
+            [params setObject:response.regeocode.addressComponent.province forKey:@"province"];
+            [params setObject:response.regeocode.addressComponent.city forKey:@"city"];
+            [params setObject:response.regeocode.addressComponent.district  forKey:@"district"];
+            [params setObject:response.regeocode.addressComponent.township forKey:@"street"];
+            [params setObject:@"" forKey:@"aoiName"];
+            [params setObject:@"" forKey:@"poiName"];
+        }
+        
+//        NSString * function = [NSString stringWithFormat:@"requestLocation(\"%@\")",[params modelToJSONString]];
+//        NSLog(@"方法详情：%@",function);
+//           //执行js方法
+//           [self.webView evaluateJavaScript:function completionHandler:^(id _Nullable result, NSError * _Nullable error) {
+//               //回调 error==nil 调用成功
+//               NSLog(@"回传定位 error = %@",error);
+//           }];
+    }
+}
+
 
 
 #pragma mark - 初始化Websocket

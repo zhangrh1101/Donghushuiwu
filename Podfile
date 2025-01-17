@@ -23,6 +23,7 @@ pod 'IQKeyboardManager'
 
 pod 'AMap3DMap-NO-IDFA'
 pod 'AMapLocation-NO-IDFA'
+pod 'AMapSearch-NO-IDFA'
 
 pod 'SocketRocket'
 

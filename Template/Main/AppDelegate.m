@@ -16,7 +16,9 @@
 
 
 //地址入口
-static NSString *const WebURL = @"https://server1.wh-nf.cn:8201/h5/#/login";
+static NSString *const WebURL =  @"https://server1.wh-nf.cn:8201/h5/#/login";
+//@"http://192.168.16.45:8502/h5/#/login";
+// @"https://server1.wh-nf.cn:8201/h5/#/login";
 //static NSString *const WebURL = @"https://server1.wh-nf.cn:8201/h5/#/login";
 
 @interface AppDelegate () <AMapLocationManagerDelegate>
@@ -44,15 +46,15 @@ static NSString *const WebURL = @"https://server1.wh-nf.cn:8201/h5/#/login";
     self.window.backgroundColor = [UIColor clearColor];
     //    self.window.backgroundColor = [UIColor whiteColor];
     
-//    HHWebViewController *webVC = [[HHWebViewController alloc] init];
-//    webVC.htmlUrl = WebURL;
-//    self.window.rootViewController = webVC;
-//    [self.window makeKeyAndVisible];
-    
-    
-    DHMainViewController *webVC = [[DHMainViewController alloc] init];
+    HHWebViewController *webVC = [[HHWebViewController alloc] init];
+    webVC.htmlUrl = WebURL;
     self.window.rootViewController = webVC;
     [self.window makeKeyAndVisible];
+    
+    
+//    DHMainViewController *webVC = [[DHMainViewController alloc] init];
+//    self.window.rootViewController = webVC;
+//    [self.window makeKeyAndVisible];
     
 }
 
@@ -87,7 +89,7 @@ static NSString *const WebURL = @"https://server1.wh-nf.cn:8201/h5/#/login";
     manager.shouldResignOnTouchOutside=YES;
     manager.shouldToolbarUsesTextFieldTintColor=YES;
     manager.keyboardDistanceFromTextField = KScale(60);
-    manager.toolbarManageBehavior = IQAutoToolbarByTag;
+    manager.toolbarManageBehaviour = IQAutoToolbarByTag;
 }
 
 #pragma mark - 高德配置

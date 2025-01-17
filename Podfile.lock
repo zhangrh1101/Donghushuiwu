@@ -1,0 +1,88 @@
+PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - AMap3DMap-NO-IDFA (9.7.0):
+    - AMapFoundation-NO-IDFA (>= 1.8.0)
+  - AMapFoundation-NO-IDFA (1.8.2)
+  - AMapLocation-NO-IDFA (2.10.0):
+    - AMapFoundation-NO-IDFA (>= 1.8.0)
+  - AMapSearch-NO-IDFA (9.7.0):
+    - AMapFoundation-NO-IDFA (>= 1.8.0)
+  - IQKeyboardManager (6.5.12)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.2.0)
+  - MJExtension (3.4.1)
+  - MJRefresh (3.7.5)
+  - SAMKeychain (1.5.3)
+  - SDWebImage (5.17.0):
+    - SDWebImage/Core (= 5.17.0)
+  - SDWebImage/Core (5.17.0)
+  - SocketRocket (0.7.0)
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - AFNetworking
+  - AMap3DMap-NO-IDFA
+  - AMapLocation-NO-IDFA
+  - AMapSearch-NO-IDFA
+  - IQKeyboardManager
+  - Masonry
+  - MBProgressHUD
+  - MJExtension
+  - MJRefresh
+  - SAMKeychain
+  - SDWebImage
+  - SocketRocket
+  - YYKit
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - AMap3DMap-NO-IDFA
+    - AMapFoundation-NO-IDFA
+    - AMapLocation-NO-IDFA
+    - AMapSearch-NO-IDFA
+    - IQKeyboardManager
+    - Masonry
+    - MBProgressHUD
+    - MJExtension
+    - MJRefresh
+    - SAMKeychain
+    - SDWebImage
+    - SocketRocket
+    - YYKit
+
+SPEC CHECKSUMS:
+  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
+  AMap3DMap-NO-IDFA: a3516859f2e82eda9fe9309c57d862f1543c2de4
+  AMapFoundation-NO-IDFA: 6ce0ef596d4eb8d934ff498e56747b6de1247b05
+  AMapLocation-NO-IDFA: 735791aeb1ba52dff666e4158b86caf4b68b5be7
+  AMapSearch-NO-IDFA: 749f73d5a773758f01a24eb8872f8798c8b47cb4
+  IQKeyboardManager: b1fd66ccf7a79095bdcc4a2735231586f744216e
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJExtension: 21c5f6f8c4d5d8844b7ae8fbae08fed0b501f961
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
+  SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
+  SDWebImage: 750adf017a315a280c60fde706ab1e552a3ae4e9
+  SocketRocket: abac6f5de4d4d62d24e11868d7a2f427e0ef940d
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: 309df636c8e2b281a1042e358a3be929512b63d3
+
+COCOAPODS: 1.11.3
