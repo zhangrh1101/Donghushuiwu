@@ -11,6 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DHPreviewViewController : BaseViewController
 
+//当前播放的通道id
+@property (nonatomic, copy)   NSString                  * selectChannelId;
+
 @end
 
 NS_ASSUME_NONNULL_END

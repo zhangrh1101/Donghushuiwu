@@ -390,6 +390,7 @@
 		3ADE98142D35024E00C67C15 /* DSSPlayWndToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSSPlayWndToolBar.h; sourceTree = "<group>"; };
 		3ADE98152D35024E00C67C15 /* DSSRealPtzControlView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSSRealPtzControlView.xib; sourceTree = "<group>"; };
 		3ADE98202D35028C00C67C15 /* DHPreviewHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DHPreviewHeader.h; sourceTree = "<group>"; };
+		3ADE98212D38F5BD00C67C15 /* Template.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Template.entitlements; sourceTree = "<group>"; };
 		4B58246B2D33BE7100B4A675 /* DHMediaPlay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DHMediaPlay.framework; sourceTree = "<group>"; };
 		4B58246C2D33BE7100B4A675 /* DHMediaPlayFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DHMediaPlayFramework.framework; sourceTree = "<group>"; };
 		4B58246D2D33BE7100B4A675 /* DHMediaPlayResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DHMediaPlayResource.bundle; sourceTree = "<group>"; };
@@ -504,6 +505,7 @@
 		3A2AF1C02D2CB4ED00158E09 /* Template */ = {
 			isa = PBXGroup;
 			children = (
+				3ADE98212D38F5BD00C67C15 /* Template.entitlements */,
 				3ADE97FE2D34AB9000C67C15 /* DHMonitor */,
 				3ADE98062D35024E00C67C15 /* PreviewView */,
 				3ADE97E82D33D28800C67C15 /* Manager */,
@@ -821,15 +823,15 @@
 		3ADE98062D35024E00C67C15 /* PreviewView */ = {
 			isa = PBXGroup;
 			children = (
+				3ADE98142D35024E00C67C15 /* DSSPlayWndToolBar.h */,
+				3ADE980C2D35024E00C67C15 /* DSSPlayWndToolBar.m */,
+				3ADE980F2D35024E00C67C15 /* DSSPlayWndToolBar.xib */,
 				3ADE98102D35024E00C67C15 /* DHStreamSelectView.h */,
 				3ADE980A2D35024E00C67C15 /* DHStreamSelectView.m */,
 				3ADE98132D35024E00C67C15 /* DHStreamSelectView.xib */,
 				3ADE980B2D35024E00C67C15 /* DSSMainToolBar.h */,
 				3ADE98112D35024E00C67C15 /* DSSMainToolBar.m */,
 				3ADE980D2D35024E00C67C15 /* DSSMainToolBar.xib */,
-				3ADE98142D35024E00C67C15 /* DSSPlayWndToolBar.h */,
-				3ADE980C2D35024E00C67C15 /* DSSPlayWndToolBar.m */,
-				3ADE980F2D35024E00C67C15 /* DSSPlayWndToolBar.xib */,
 				3ADE980E2D35024E00C67C15 /* DSSPtzToolBar.h */,
 				3ADE98082D35024E00C67C15 /* DSSPtzToolBar.m */,
 				3ADE98072D35024E00C67C15 /* DSSPtzToolBar.xib */,
@@ -1301,6 +1303,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Template/Template.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 484C8PW5NG;
@@ -1348,6 +1351,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Template/Template.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 484C8PW5NG;

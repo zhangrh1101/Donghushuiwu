@@ -23,7 +23,7 @@ static DHDataCenter* g_shareInstance = nil;
     return g_shareInstance;
 }
 
-- (id) init
+- (id)init
 {
     self = [super init];
     if (self)

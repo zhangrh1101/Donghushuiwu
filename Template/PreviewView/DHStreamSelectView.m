@@ -14,7 +14,15 @@
 
 @implementation DHStreamSelectView
 
--(instancetype)initWithCoder:(NSCoder *)aDecoder{
+- (instancetype)init {
+    if(self = [super init]){
+        _view = [[[NSBundle mainBundle] loadNibNamed:@"DHStreamSelectView" owner:self options:nil] firstObject];
+        [self addSubview:self.view];
+    }
+    return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder{
     self = [super initWithCoder:aDecoder];
     if (self) {
         _view = [[[NSBundle mainBundle] loadNibNamed:@"DHStreamSelectView" owner:self options:nil] firstObject];
@@ -24,6 +32,7 @@
 }
 
 -(void)layoutSubviews{
+    [super layoutSubviews];
     self.view.frame = self.bounds;
 }
 
@@ -53,13 +62,7 @@
             break;
     }
 }
-- (IBAction)SDBtnClick:(UIButton *)sender {
-//    sender.selected = !sender.selected;
-    if([self.delegate respondsToSelector:@selector(DSSStreamPanelDelegateSelectSD)])
-    {
-        [self.delegate DSSStreamPanelDelegateSelectSD];
-    }
-}
+
 - (IBAction)HDBtnClick:(UIButton *)sender {
 //    sender.selected = !sender.selected;
     if([self.delegate respondsToSelector:@selector(DSSStreamPanelDelegateSelectHD)])
@@ -67,6 +70,15 @@
         [self.delegate DSSStreamPanelDelegateSelectHD];
     }
 }
+
+- (IBAction)SDBtnClick:(UIButton *)sender {
+//    sender.selected = !sender.selected;
+    if([self.delegate respondsToSelector:@selector(DSSStreamPanelDelegateSelectSD)])
+    {
+        [self.delegate DSSStreamPanelDelegateSelectSD];
+    }
+}
+
 - (IBAction)LCBtnClick:(UIButton *)sender {
 //    sender.selected = !sender.selected;
     if([self.delegate respondsToSelector:@selector(DSSStreamPanelDelegateSelectLC)])

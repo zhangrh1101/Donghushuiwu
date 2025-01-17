@@ -20,6 +20,15 @@
     [super awakeFromNib];
 }
 
+- (instancetype)init {
+    if(self = [super init]){
+        _view = [[[NSBundle mainBundle] loadNibNamed:@"DSSRealPtzControlView" owner:self options:nil] firstObject];
+        [self addSubview:self.view];
+        self.view.frame = self.bounds;
+    }
+    return self;
+}
+
 - (instancetype)initWithCoder:(NSCoder *)aDecoder{
     self = [super initWithCoder:aDecoder];
     if (self) {

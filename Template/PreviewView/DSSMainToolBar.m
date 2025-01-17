@@ -20,6 +20,15 @@
 
 @implementation DSSMainToolBar
 
+- (instancetype)init {
+    if(self = [super init]){
+        _view = [[[NSBundle mainBundle] loadNibNamed:@"DSSMainToolBar" owner:self options:nil] firstObject];
+        self.view.frame = self.bounds;
+        [self addSubview:self.view];
+    }
+    return self;
+}
+
 - (instancetype)initWithCoder:(NSCoder *)aDecoder{
     self = [super initWithCoder:aDecoder];
     if (self) {
@@ -29,6 +38,7 @@
     }
     return self;
 }
+
 -(void)awakeFromNib{
     [super awakeFromNib];
     [self.capLabel setText:@"Capture"];
