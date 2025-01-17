@@ -88,7 +88,7 @@ static NSString *const WebURL = @"https://server1.wh-nf.cn:8201/h5/#/login";
     manager.shouldResignOnTouchOutside=YES;
     manager.shouldToolbarUsesTextFieldTintColor=YES;
     manager.keyboardDistanceFromTextField = KScale(60);
-    manager.toolbarManageBehavior = IQAutoToolbarByTag;
+    manager.toolbarManageBehaviour = IQAutoToolbarByTag;
 }
 
 #pragma mark - 高德配置

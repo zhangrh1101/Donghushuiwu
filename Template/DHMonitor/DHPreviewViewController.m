@@ -48,6 +48,9 @@ typedef enum : int {
 
 @property (nonatomic, strong) dispatch_queue_t ptzQueue;
 
+//是否全屏
+@property (nonatomic, assign) BOOL                        isFullScreen;
+
 @end
 
 @implementation DHPreviewViewController
@@ -57,6 +60,7 @@ typedef enum : int {
     // Do any additional setup after loading the view.
     
     self.navigationItem.title = @"实时预览";
+    self.isFullScreen = NO;
     [self initPlayView];
 }
 
@@ -81,23 +85,43 @@ typedef enum : int {
     [self updateBtnStatus:0];
 }
 
+# pragma mark - 全屏
+- (void)onClickedfullScreen {
+    
+    UIWindow *keyWindow = [UIApplication sharedApplication].delegate.window;
+    //播放器所在控制器不支持旋转，采用旋转view的方式实现
+    CGFloat duration = [UIApplication sharedApplication].statusBarOrientationAnimationDuration;
+    
+    if (self.isFullScreen) {
+        [UIView animateWithDuration:duration animations:^{
+            self.playWindow.transform = CGAffineTransformMakeRotation(0);
+        }];
+        self.playWindow.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_WIDTH/4*3);
+        [self.playWindow removeFromSuperview];
+        [self.view addSubview:self.playWindow];
+        
+        self.isFullScreen = NO;
+    } else {
+        [UIView animateWithDuration:duration animations:^{
+            self.playWindow.transform = CGAffineTransformMakeRotation(M_PI / 2);
+        }];
+        self.playWindow.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+        [self.playWindow removeFromSuperview];
+        [keyWindow addSubview:self.playWindow];
+        
+        self.isFullScreen = YES;
+    }
+    
+}
 
 - (void)initPlayView {
     
     WeakSelf
-    _playWindow = [[DHMediaPlayView alloc] init];
-    [self.view addSubview:_playWindow];
-    [_playWindow mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(0);
-        make.left.right.mas_equalTo(0);
-        make.height.mas_equalTo(SCREEN_WIDTH/4*3);
-    }];
-    
     //工具菜单View
     _playWndToolView = [[DSSPlayWndToolBar alloc] init];
     [self.view addSubview:_playWndToolView];
     [_playWndToolView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_playWindow.mas_bottom);
+        make.top.mas_equalTo(SCREEN_WIDTH/4*3);
         make.left.right.mas_equalTo(0);
         make.height.mas_equalTo(50);
     }];
@@ -160,6 +184,30 @@ typedef enum : int {
         make.width.mas_equalTo(155);
         make.height.mas_equalTo(50);
     }];
+    
+    
+//    _playWindow = [[DHMediaPlayView alloc] init];
+//    [self.view addSubview:_playWindow];
+//    [_playWindow mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.mas_equalTo(0);
+//        make.left.right.mas_equalTo(0);
+//        make.height.mas_equalTo(SCREEN_WIDTH/4*3);
+//    }];
+    
+    self.playWindow = [[DHMediaPlayView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_WIDTH/4*3)];
+    self.playWindow.canRemoveCameraByTrash = NO;
+    [self.view addSubview:self.playWindow];
+ 
+    UIButton *fullScreenButton = [ControlTools buttonWithImage:@"player_fullscreen" title:@"" titleColor:nil font:0 upInsideAction:^(id  _Nonnull sender) {
+        [weakSelf onClickedfullScreen];
+    }];
+    [self.playWindow addSubview:fullScreenButton];
+    [fullScreenButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(0);
+        make.bottom.mas_equalTo(-15);
+        make.width.height.mas_equalTo(60);
+    }];
+
     
     
     self.ptzQueue = dispatch_queue_create("PTZ_QUEUE", DISPATCH_QUEUE_SERIAL);
