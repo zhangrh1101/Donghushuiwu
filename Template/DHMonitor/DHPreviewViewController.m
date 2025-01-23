@@ -186,14 +186,7 @@ typedef enum : int {
     }];
     
     
-//    _playWindow = [[DHMediaPlayView alloc] init];
-//    [self.view addSubview:_playWindow];
-//    [_playWindow mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.mas_equalTo(0);
-//        make.left.right.mas_equalTo(0);
-//        make.height.mas_equalTo(SCREEN_WIDTH/4*3);
-//    }];
-    
+    //视频View
     self.playWindow = [[DHMediaPlayView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_WIDTH/4*3)];
     self.playWindow.canRemoveCameraByTrash = NO;
     [self.view addSubview:self.playWindow];
@@ -208,7 +201,6 @@ typedef enum : int {
         make.width.height.mas_equalTo(60);
     }];
 
-    
     
     self.ptzQueue = dispatch_queue_create("PTZ_QUEUE", DISPATCH_QUEUE_SERIAL);
     self.playWndToolView.delegate = self;

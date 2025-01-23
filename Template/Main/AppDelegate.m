@@ -18,7 +18,8 @@
 //地址入口
 
 //static NSString *const WebURL = @"http://192.168.2.14:8502/h5/";
-static NSString *const WebURL = @"https://server1.wh-nf.cn:8201/h5/#/login";
+//static NSString *const WebURL = @"https://server1.wh-nf.cn:8201/h5/#/login";
+static NSString *const WebURL = @"https://dhgx.wh-nf.cn:8201/h5/";
 
 @interface AppDelegate () <AMapLocationManagerDelegate>
 
